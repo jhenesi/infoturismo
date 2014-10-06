@@ -5,7 +5,8 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
 		scope: {
 			title: '@',
 			categories: '=',
-			series: '='
+			series: '=',
+            pointClick: '&'
 		},
 		restrict: 'E',
 		template: '<div class="chart-container"></div>',
@@ -61,6 +62,24 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
                     verticalAlign: 'top',
                     y: 70,
                     layout: 'vertical'
+                },
+
+                plotOptions: {
+                    series: {
+                        cursor: 'pointer',
+                        point: {
+                            events: {
+                                click: function () {
+                                    scope.pointClick({
+                                        eventArgs: {
+                                            index: this.index,
+                                            category: this.category
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    }
                 },
 
                 series: series

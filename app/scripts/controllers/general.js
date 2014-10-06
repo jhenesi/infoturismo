@@ -15,4 +15,8 @@ angular.module('infoturismoApp').controller('GeneralCtrl', function ($scope) {
       name: 'Promedio',
       data: [9, 8, 7, 9, 10, 8, 9]
     }];
+
+    $scope.onPointClick = function(eventArgs){
+        console.log(eventArgs);
+    };
 });
