@@ -3,7 +3,7 @@
 describe('Unit: La directiva chartRadar', function() {
   beforeEach(module('infoturismoApp'));
 
-  var element, scope, chart, labels, categorias, series;
+  var element, scope, chart, categorias, series;
 
   beforeEach(inject(function($rootScope, $compile) {
       element = angular.element(
@@ -37,8 +37,6 @@ describe('Unit: La directiva chartRadar', function() {
       scope.$apply();
 
       chart = element.highcharts();
-
-      labels = $(element).find('.highcharts-xaxis-labels span').not(":last");
     }));
 
     it("debe de mostrar el titulo proporcionado", function(){
@@ -46,6 +44,8 @@ describe('Unit: La directiva chartRadar', function() {
     });
 
     it("debe de mostrar las categorias proporcionadas en la grafica", function(){
+      var labels = $(element).find('.highcharts-xaxis-labels span').not(":last");
+
       categorias.map(function(categoria, i){
         expect($(labels[i]).text()).toBe(categoria);
       });
@@ -75,7 +75,7 @@ describe('Unit: La directiva chartRadar', function() {
 
       spyOn(scope, 'onLabelClick');
 
-      labels.click();
+      element.find(".highcharts-container .label-pointer").click();
 
       categorias.map(function(categoria, i){
         expect(scope.onLabelClick).toHaveBeenCalledWith({

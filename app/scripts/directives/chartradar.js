@@ -69,18 +69,32 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
 
                 series: series
             });
-            
-            labels = $(chart).find('.highcharts-xaxis-labels span');
 
-            labels.css("cursor","pointer")
-            labels.click(function(e){
-                var index = $(e.currentTarget).index();
+            labels = $(chart).find(".highcharts-xaxis-labels > span").not(":last");
 
-                scope.labelClick({
-                    eventArgs: {
-                        index: index,
-                        category: chart.highcharts().options.xAxis[0].categories[index]
-                    }
+            labels.each(function(i, label){
+                var div = $('<div class="label-pointer"></div>');
+
+                div.css("position", $(label).css("position"));
+                div.css("white-space", $(label).css("white-space"));
+                div.css("color", $(label).css("color"));
+                div.css("cursor", "pointer");
+                div.css("margin-left", $(label).css("margin-left"));
+                div.css("margin-top", $(label).css("margin-top"));
+                div.css("left", $(label).css("left"));
+                div.css("top", $(label).css("top"));
+                div.css("width", $(label).css("width"));
+                div.css("height", $(label).css("height"));
+
+                $(chart).find(".highcharts-container").append(div);
+
+                div.click(function(e){
+                    scope.labelClick({
+                        eventArgs: {
+                            index: i,
+                            category: chart.highcharts().options.xAxis[0].categories[i]
+                        }
+                    });
                 });
             });
 		}
