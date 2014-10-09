@@ -3,16 +3,16 @@
 describe('Unit: La directiva chartRadar', function() {
   beforeEach(module('infoturismoApp'));
 
-  var element, scope, chart;
+  var element, scope, chart, labels, categorias, series;
 
   beforeEach(inject(function($rootScope, $compile) {
       element = angular.element(
-        '<chart-radar title="Budget vs spending" categories="categorias" series="series" point-click="onPointClick(eventArgs)"></chart-radar>'
+        '<chart-radar id="chart" title="Budget vs spending" categories="categorias" series="series" label-click="onLabelClick(eventArgs)"></chart-radar>'
       );
  
       scope = $rootScope.$new();
 
-      scope.categorias = [
+      categorias = [
         'Sales', 
         'Marketing', 
         'Development', 
@@ -21,62 +21,67 @@ describe('Unit: La directiva chartRadar', function() {
         'Administration'
       ];
 
-      scope.series = [{
+      scope.categorias = categorias;
+
+      series = [{
           name: 'Allocated Budget',
           data: [43000, 19000, 60000, 35000, 17000, 10000]
       }, {
           name: 'Actual Spending',
           data: [50000, 39000, 42000, 31000, 26000, 14000]
       }];
+
+      scope.series = series;
  
       element = $compile(element)(scope);
       scope.$apply();
 
       chart = element.highcharts();
+
+      labels = $(element).find('.highcharts-xaxis-labels span').not(":last");
     }));
 
-    it("debe de mostrar el titulo proporcionado en la grafica", function(){
-      expect(chart.options.title.text).toBe("Budget vs spending")
+    it("debe de mostrar el titulo proporcionado", function(){
+      expect($(element).find('.highcharts-title').text()).toBe("Budget vs spending");
     });
 
     it("debe de mostrar las categorias proporcionadas en la grafica", function(){
-      expect(chart.options.xAxis[0].categories).toEqual([
-        'Sales', 
-        'Marketing', 
-        'Development', 
-        'Customer Support',
-        'Information Technology', 
-        'Administration'
-      ]);
+      categorias.map(function(categoria, i){
+        expect($(labels[i]).text()).toBe(categoria);
+      });
     });
 
-    it("debe de mostrar los datos proporcionados en la grafica", function(){
-      expect(chart.options.series[0].name).toBe('Allocated Budget');
-      expect(chart.options.series[0].data).toEqual([
-        43000, 
-        19000, 
-        60000, 
-        35000, 
-        17000, 
-        10000
-      ]);
-      expect(chart.options.series[1].name).toBe('Actual Spending');
-      expect(chart.options.series[1].data).toEqual([
-        50000, 
-        39000, 
-        42000, 
-        31000, 
-        26000, 
-        14000
-      ]);
+    it("debe de mostrar un marcador por cada dato proporcionado", function(){
+      var markers, dataLength;
+
+      markers = $(element).find(".highcharts-series-group .highcharts-markers path");
+      dataLength = 0;
+
+      series.map(function(serie){ dataLength += serie.data.length });
+
+      expect(markers.length).toBe(dataLength);
     });
 
-    it("debe de exponer un evento click y proporcionar como argumento un objeto con el indice y el nombre de la categoria seleccionada para cada punto en la grafica", function(){
-      scope.onPointClick = function(eventArgs){
-        expect(eventArgs.index).toBe(0);
-        expect(eventArgs.category).toBe('Sales');
-      };
+    it("debe de mostrar una leyenda por cada serie de datos proporcionada", function(){
+      var legends = $(element).find('.highcharts-legend-item text');
 
-      chart.series[0].data[0].firePointEvent('click', event);
+      series.map(function(serie, i){
+        expect($(legends[i]).text()).toBe(serie.name);
+      });
+    })
+
+    it("debe de exponer un evento click y proporcionar como argumento un objeto con el indice y el nombre de la categoria seleccionada", function(){   
+      scope.onLabelClick = function(eventArgs){};
+
+      spyOn(scope, 'onLabelClick');
+
+      labels.click();
+
+      categorias.map(function(categoria, i){
+        expect(scope.onLabelClick).toHaveBeenCalledWith({
+          index: i,
+          category: categoria
+        });
+      });
     });
 });

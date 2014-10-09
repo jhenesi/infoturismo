@@ -6,13 +6,13 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
 			title: '@',
 			categories: '=',
 			series: '=',
-            pointClick: '&'
+            labelClick: '&'
 		},
 		restrict: 'E',
 		template: '<div class="chart-container"></div>',
 		replace: true,
 		link: function(scope, el, attrs) {
-            var chart, series;
+            var chart, series, labels;
 
 			series = scope.series.map(function(item) {
 				return {
@@ -25,7 +25,8 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
 			chart = el.highcharts({
                 chart: {
                     polar: true,
-                    type: 'line'
+                    type: 'line',
+                    backgroundColor: 'rgba(255, 255, 255, 0)'
                 },
 
                 title: {
@@ -42,7 +43,8 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
                     tickmarkPlacement: 'on',
                     lineWidth: 0,
                     labels: {
-                    	step: 1
+                    	step: 1,
+                        useHTML: true
                     }
                 },
 
@@ -54,35 +56,32 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
 
                 tooltip: {
                     shared: true,
-                    pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                    pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>',
+                    useHTML: true
                 },
 
                 legend: {
-                    align: 'right',
-                    verticalAlign: 'top',
-                    y: 70,
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    //y: 70,
                     layout: 'vertical'
                 },
 
-                plotOptions: {
-                    series: {
-                        cursor: 'pointer',
-                        point: {
-                            events: {
-                                click: function () {
-                                    scope.pointClick({
-                                        eventArgs: {
-                                            index: this.index,
-                                            category: this.category
-                                        }
-                                    });
-                                }
-                            }
-                        }
-                    }
-                },
-
                 series: series
+            });
+            
+            labels = $(chart).find('.highcharts-xaxis-labels span');
+
+            labels.css("cursor","pointer")
+            labels.click(function(e){
+                var index = $(e.currentTarget).index();
+
+                scope.labelClick({
+                    eventArgs: {
+                        index: index,
+                        category: chart.highcharts().options.xAxis[0].categories[index]
+                    }
+                });
             });
 		}
 	};
