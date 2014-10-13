@@ -2,35 +2,36 @@
 
 angular.module('infoturismoApp').directive('chartRadar', function () {
     return {
-		scope: {
-			title: '@',
-			categories: '=',
-			series: '=',
+        scope: {
+            categories: '=',
+            series: '=',
             labelClick: '&'
-		},
-		restrict: 'E',
-		template: '<div class="chart-container"></div>',
-		replace: true,
-		link: function(scope, el, attrs) {
-            var chart, series, labels;
+        },
+        restrict: 'E',
+        template: '<div class="chart-container"></div>',
+        replace: true,
+        link: function(scope, el, attrs) {
+            var chart, series, tooltipPosition, labels, tooltipLabel;
 
-			series = scope.series.map(function(item) {
-				return {
-					name: item.name,
-					data: item.data,
-					pointPlacement: 'on'
-				}
-			});
+            series = scope.series.map(function(item) {
+                return {
+                    name: item.name,
+                    data: item.data,
+                    pointPlacement: 'on',
+                    showInLegend: false
+                }
+            });
 
-			chart = el.highcharts({
+            chart = el.highcharts({
                 chart: {
                     polar: true,
-                    type: 'line',
-                    backgroundColor: 'rgba(255, 255, 255, 0)'
+                    type: 'line'
                 },
 
+                exporting: { enabled: false },
+
                 title: {
-                    text: scope.title,
+                    text: '',
                     x: -80
                 },
 
@@ -43,60 +44,53 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
                     tickmarkPlacement: 'on',
                     lineWidth: 0,
                     labels: {
-                    	step: 1,
-                        useHTML: true
+                        step: 1,
+                        distance: 25
                     }
                 },
 
                 yAxis: {
                     gridLineInterpolation: 'polygon',
                     lineWidth: 0,
-                    min: 0
+                    min: 0,
+                    max: 10,
+                    showLastLabel: true,
+                    tickInterval: 2
                 },
 
                 tooltip: {
-                    shared: true,
-                    pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>',
-                    useHTML: true
+                    formatter: function () {
+                        return this.x + '</b>: <b>' + this.y + '</b>';
+                    }
                 },
 
                 legend: {
                     align: 'center',
                     verticalAlign: 'bottom',
-                    //y: 70,
                     layout: 'vertical'
                 },
 
                 series: series
             });
 
-            labels = $(chart).find(".highcharts-xaxis-labels > span").not(":last");
+            labels = $(chart).find(".highcharts-axis-labels > text");
+            tooltipLabel = $(chart).find(".highcharts-tooltip> text");
 
-            labels.each(function(i, label){
-                var div = $('<div class="label-pointer"></div>');
+            labels.css("cursor", "pointer");
+            tooltipLabel.css("cursor", "pointer");
 
-                div.css("position", $(label).css("position"));
-                div.css("white-space", $(label).css("white-space"));
-                div.css("color", $(label).css("color"));
-                div.css("cursor", "pointer");
-                div.css("margin-left", $(label).css("margin-left"));
-                div.css("margin-top", $(label).css("margin-top"));
-                div.css("left", $(label).css("left"));
-                div.css("top", $(label).css("top"));
-                div.css("width", $(label).css("width"));
-                div.css("height", $(label).css("height"));
-
-                $(chart).find(".highcharts-container").append(div);
-
-                div.click(function(e){
-                    scope.labelClick({
-                        eventArgs: {
-                            index: i,
-                            category: chart.highcharts().options.xAxis[0].categories[i]
-                        }
-                    });
+            labels.click(function(e) {
+                scope.labelClick({
+                    e: e
                 });
             });
-		}
-	};
+
+            tooltipLabel.click(function(e) {
+                scope.labelClick({
+                    e: e
+                });
+            });
+        }
+    };
 });
+

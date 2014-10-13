@@ -1,15 +1,15 @@
 'use strict';
- 
+
 describe('Unit: La directiva chartRadar', function() {
+
   beforeEach(module('infoturismoApp'));
+    var element, scope, chart, categorias, series;
 
-  var element, scope, chart, categorias, series;
-
-  beforeEach(inject(function($rootScope, $compile) {
+    beforeEach(inject(function($rootScope, $compile) {
       element = angular.element(
-        '<chart-radar id="chart" title="Budget vs spending" categories="categorias" series="series" label-click="onLabelClick(eventArgs)"></chart-radar>'
+        '<chart-radar categories="categorias" series="series" label-click="onLabelClick(e)"></chart-radar>'
       );
- 
+
       scope = $rootScope.$new();
 
       categorias = [
@@ -32,19 +32,15 @@ describe('Unit: La directiva chartRadar', function() {
       }];
 
       scope.series = series;
- 
+
       element = $compile(element)(scope);
       scope.$apply();
 
       chart = element.highcharts();
     }));
 
-    it("debe de mostrar el titulo proporcionado", function(){
-      expect($(element).find('.highcharts-title').text()).toBe("Budget vs spending");
-    });
-
     it("debe de mostrar las categorias proporcionadas en la grafica", function(){
-      var labels = $(element).find('.highcharts-xaxis-labels span').not(":last");
+      var labels = $(element).find('.highcharts-xaxis-labels > text').not(":last");
 
       categorias.map(function(categoria, i){
         expect($(labels[i]).text()).toBe(categoria);
@@ -52,36 +48,30 @@ describe('Unit: La directiva chartRadar', function() {
     });
 
     it("debe de mostrar un marcador por cada dato proporcionado", function(){
-      var markers, dataLength;
-
-      markers = $(element).find(".highcharts-series-group .highcharts-markers path");
-      dataLength = 0;
+      var dataLength = 0;
 
       series.map(function(serie){ dataLength += serie.data.length });
 
-      expect(markers.length).toBe(dataLength);
+      expect(chart.pointCount).toBe(dataLength);
     });
 
-    it("debe de mostrar una leyenda por cada serie de datos proporcionada", function(){
-      var legends = $(element).find('.highcharts-legend-item text');
-
-      series.map(function(serie, i){
-        expect($(legends[i]).text()).toBe(serie.name);
-      });
-    })
-
-    it("debe de exponer un evento click y proporcionar como argumento un objeto con el indice y el nombre de la categoria seleccionada", function(){   
-      scope.onLabelClick = function(eventArgs){};
+    it("debe disparar un evento al dar click en alguna categoria", function(){   
+      scope.onLabelClick = function(e){};
 
       spyOn(scope, 'onLabelClick');
 
-      element.find(".highcharts-container .label-pointer").click();
+      element.find(".highcharts-axis-labels > text").click();
 
-      categorias.map(function(categoria, i){
-        expect(scope.onLabelClick).toHaveBeenCalledWith({
-          index: i,
-          category: categoria
-        });
-      });
+      expect(scope.onLabelClick).toHaveBeenCalled();
+    });
+
+    it("debe disparar un evento al dar click en la categoria del tooltip", function(){   
+      scope.onLabelClick = function(e){};
+
+      spyOn(scope, 'onLabelClick');
+
+      element.find(".highcharts-tooltip> text").click();
+
+      expect(scope.onLabelClick).toHaveBeenCalled();
     });
 });

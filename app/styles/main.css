@@ -81,21 +81,22 @@ body {
 .chart-row > div > div > div {
     height: 100%;
 }
+
 .chart-container {
     height: 100%;
     width: 100%;
     background-color: #FFFFFF;
 }
 
-.highcharts-axis-labels span .category-icon {
-    display: inline-block;
+.highcharts-axis-labels > text > tspan[style*='font-family: FontAwesome'] {
+    display: block;
 }
 
-.highcharts-axis-labels span .category-name {
+.highcharts-axis-labels > text > tspan {
     display: none;
 }
 
-.highcharts-tooltip span .category-icon {
+.highcharts-tooltip > text > tspan[style*='font-family: FontAwesome'] {
     display: none;
 }
 
@@ -122,12 +123,10 @@ body {
         overflow-y: hidden;
         overflow-x: hidden;
         background: #fff;
-    
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
         -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
-   
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -148,12 +147,12 @@ body {
         top: 225px;
     }
 
-    .highcharts-axis-labels span .category-icon {
+    .highcharts-axis-labels > text > tspan[style*='font-family: FontAwesome'] {
         display: none;
     }
 
-    .highcharts-axis-labels span .category-name {
-        display: inline-block;
+    .highcharts-axis-labels > text > tspan {
+        display: block;
     }
 }
 
@@ -340,8 +339,4 @@ ul.alert-dropdown {
 
 .panel-yellow a:hover {
     color: #df8a13;
-}
-
-.highcharts-axis-labels {
-    z-index: -1;
 }
