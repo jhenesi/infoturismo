@@ -18,12 +18,8 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/acceso', {
-        templateUrl: 'views/acceso.html'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/first', {
+        templateUrl: 'views/first.html'
       })
       .otherwise({
         redirectTo: '/'
