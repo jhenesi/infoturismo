@@ -28,22 +28,13 @@ angular.module('infoturismoApp').controller('MainCtrl', ['$scope', '$window', 'i
             };
         })
         .error(function(data, status, headers, config) {
-    });
+        });
 
-    /*$scope.categorias = [
-        '<span style="font-family: FontAwesome;">\uf1ba<span><span>Acceso al Destino e Infraestructura</span>', 
-        '<span style="font-family: FontAwesome;">\uf041<span><span>Atractivos y Oferta Turística</span>', 
-        '<span style="font-family: FontAwesome;">\uf0f4<span><span>Consumo de Servicios</span>', 
-        '<span style="font-family: FontAwesome;">\uf155<span><span>Costo</span>',
-        '<span>Experiencia de Viaje</span><span style="font-family: FontAwesome;">\uf1d8</span>', 
-        '<span>Imagen</span><span style="font-family: FontAwesome;">\uf02e</span>',
-        '<span>Satisfacción y Recomendación</span><span style="font-family: FontAwesome;">\uf164</span>'
-    ];
-
-    $scope.series = [{
-        name: 'Promedio',
-        data: [8, 8, 8, 8, 8, 8, 8]
-    }];*/
+    $scope.navegacion = {
+      name: "Vista General",
+      href: "#/",
+      icon: "fa-globe"
+    };
 
     $scope.onLabelClick = function(e){
         $window.location = '#/first';

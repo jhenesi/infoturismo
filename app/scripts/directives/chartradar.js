@@ -131,26 +131,6 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
 
                 draw(el, scope.data.categories, scope.data.series);
             });
-
-            /*labels = $(chart).find(".highcharts-axis-labels > text");
-            tooltipLabel = $(chart).find(".highcharts-tooltip> text");
-
-            labels.css("cursor", "pointer");
-            tooltipLabel.css("cursor", "pointer");
-
-            labels.click(function(e) {
-                scope.labelClick({
-                    e: e
-                });
-            });
-
-            tooltipLabel.click(function(e) {
-                scope.labelClick({
-                    e: e
-                });
-            });*/
-
-            //console.log(chart);
         }
     };
 });
