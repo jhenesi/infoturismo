@@ -14,7 +14,7 @@ angular.module('infoturismoApp').directive('breadcrumb', function () {
   		template: '<ol class="breadcrumb"></ol>',
   		restrict: 'E',
       replace: true,
-  		link: function postLink(scope, element, attrs) {
+  		link: function(scope, element, attrs) {
   			var createCrumb, nav, next;
 
   			createCrumb = function (location) {

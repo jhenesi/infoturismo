@@ -1,22 +1,3 @@
-<div class="container-fluid">
-	<!-- Page Heading -->
-	<div class="row">
-	    <div class="col-lg-12">
-	        <h1 class="page-header">
-	            <i class="fa fa-globe"></i> Vista General
-	        </h1>
-	        <breadcrumb navigation="navegacion"></breadcrumb>
-	    </div>
-	</div>
-	<!-- /.row -->
-	<div class="row chart-row">
-	    <div class="col-lg-12">
-	        <div class="panel panel-default">
-	            <div class="panel-body">
-	                <chart-radar data="datos" label-click="onLabelClick(e)"></chart-radar>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-	<!-- /.row -->
-</div>
+<chartpage>
+	<chart-radar data="datos" label-click="onLabelClick(e)"></chart-radar>
+</chartpage>

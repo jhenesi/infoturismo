@@ -29,6 +29,9 @@ angular.module('infoturismoApp').controller('MainCtrl', ['$scope', '$window', 'i
         })
         .error(function(data, status, headers, config) {
         });
+ 
+    $scope.title = "Vista General";
+    $scope.titleIcon = "fa-globe";
 
     $scope.navegacion = {
       name: "Vista General",
