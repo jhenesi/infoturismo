@@ -8,6 +8,8 @@ describe('Directive: chartpage', function () {
   var element,
     scope;
 
+  beforeEach(module('app/templates/chartpage.html'));
+
   beforeEach(inject(function ($rootScope) {
     scope = $rootScope.$new();
   }));

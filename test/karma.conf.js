@@ -26,9 +26,14 @@ module.exports = function(config) {
       'bower_components/highcharts/highcharts-more.js',
       'bower_components/highcharts/modules/exporting.js',
       'app/scripts/**/*.js',
+      'app/templates/*.html',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
+
+    preprocessors: {
+      'app/templates/*.html': ['ng-html2js']
+    },
 
     // list of files / patterns to exclude
     exclude: [],
@@ -50,6 +55,7 @@ module.exports = function(config) {
 
     // Which plugins to enable
     plugins: [
+      'karma-ng-html2js-preprocessor',
       'karma-phantomjs-launcher',
       'karma-jasmine'
     ],
