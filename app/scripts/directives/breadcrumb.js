@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name infoturismoApp.directive:breadcrumb
- * @description
- * # breadcrumb
- */
 angular.module('infoturismoApp').directive('breadcrumb', function () {
 	return {
 		scope: {
