@@ -1,6 +1,17 @@
 'use strict';
 
-angular.module('infoturismoApp').controller('MainCtrl', ['$scope', '$window', 'infoturismoWebApi', function ($scope, $window, infoturismoWebApi) {
+angular.module('infoturismoApp').controller('MainCtrl', ['$scope', '$window', 'infoturismoWebApi', 'labels', 'icons', 'routes', 'crumbs', function ($scope, $window, infoturismoWebApi, labels, icons, routes, crumbs) {
+    $scope.title = labels.general;
+    $scope.titleIcon = icons.general;
+
+    var breadcrumbs = crumbs.getGeneral();
+
+    $scope.navegacion = breadcrumbs;
+
+    $scope.onLabelClick = function(e){
+        $window.location = routes.acceso;
+    };
+
     infoturismoWebApi.getOverviewData()
         .success(function(data, status, headers, config) {
             $scope.datos = {
@@ -29,19 +40,6 @@ angular.module('infoturismoApp').controller('MainCtrl', ['$scope', '$window', 'i
         })
         .error(function(data, status, headers, config) {
         });
- 
-    $scope.title = "Vista General";
-    $scope.titleIcon = "fa-globe";
-
-    $scope.navegacion = {
-      name: "Vista General",
-      href: "#/",
-      icon: "fa-globe"
-    };
-
-    $scope.onLabelClick = function(e){
-        $window.location = '#/first';
-    };
 }]);
 
 

@@ -16,19 +16,19 @@ describe('Unit: La directiva breadcrumb', function () {
     locations = [{
       name: "main",
       href: "/main",
-      icon: "fa-globe"
+      icon: "fa fa-globe"
     },{
       name: "first",
       href: "/first",
-      icon: "fa-taxi"
+      icon: "fa fa-taxi"
     },{
       name: 'second',
       href: '/second',
-      icon: "fa-arrow-up"
+      icon: "fa fa-arrow-up"
     },{
       name: 'third',
       href: '/third',
-      icon: 'fa-certificate'
+      icon: 'fa fa-certificate'
     }];
 
     locations[0].next = locations[1];
@@ -48,7 +48,7 @@ describe('Unit: La directiva breadcrumb', function () {
   it('debe de mostrar el icono correcto para cada ubicacion', function() {
     crumbs.each(function (i, crumb) {
       expect($(crumb).find("i").first().attr("class"))
-        .toBe("fa " + locations[i].icon);
+        .toBe(locations[i].icon);
     });
   });
 
@@ -67,7 +67,12 @@ describe('Unit: La directiva breadcrumb', function () {
 
   it('debe de mostrar el nombre correcto para cada ubicacion', function () {
     crumbs.each(function (i, crumb) {
-      expect($(crumb).text()).toBe(' ' + locations[i].name);
+      if(locations[i].next) {
+        expect($(crumb).find('a').text().trim()).toBe(locations[i].name);
+      }
+      else {
+        expect($(crumb).text().trim()).toBe(locations[i].name)
+      }
     });
   });
 

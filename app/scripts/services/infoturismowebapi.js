@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('infoturismoApp')
-  .service('infoturismoWebApi', function infoturismoWebApi($http) {
+angular.module('infoturismoApp').service('infoturismoWebApi', ['$http', function infoturismoWebApi($http) {
     var root = 'http://localhost:9000';
 
 	return {
@@ -9,4 +8,4 @@ angular.module('infoturismoApp')
 			return $http.get(root +'/data/resumen.json');
 		}
 	};
-  });
+}]);

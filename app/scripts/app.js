@@ -18,8 +18,9 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/first', {
-        templateUrl: 'views/first.html'
+      .when('/:sectionId', {
+        templateUrl: 'views/first.html',
+        controller: 'FirstCtrl'
       })
       .otherwise({
         redirectTo: '/'

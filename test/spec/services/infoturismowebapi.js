@@ -14,5 +14,4 @@ describe('Service: infoturismoWebApi', function () {
   it('should do something', function () {
     expect(!!infoturismoWebApi).toBe(true);
   });
-
 });
