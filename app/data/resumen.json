@@ -1,22 +1,29 @@
 [{
-	"Categoria":"Acceso al Destino e Infraestructura",
+	"Clave":"Acceso",
+	"Nombre":"Acceso al Destino e Infraestructura",
 	"Promedio": 9
 },{
-	"Categoria":"Atractivos y Oferta Turística",
+	"Clave":"Atractivos",
+	"Nombre":"Atractivos y Oferta Tur&iacute;stica",
 	"Promedio": 8
 },{
-	"Categoria":"Consumo de Servicios",
+	"Clave":"Consumo",
+	"Nombre":"Consumo de Servicios",
 	"Promedio": 7
 },{
-	"Categoria":"Costo",
+	"Clave":"Costo",
+	"Nombre":"Costo",
 	"Promedio": 9
 },{
-	"Categoria":"Experiencia de Viaje",
+	"Clave":"Experiencia",
+	"Nombre":"Experiencia de Viaje",
 	"Promedio": 10
 },{
-	"Categoria":"Imagen",
+	"Clave":"Imagen",
+	"Nombre":"Imagen",
 	"Promedio": 8
 },{
-	"Categoria":"Satisfacción y Recomendación",
+	"Clave":"Satisfacción",
+	"Nombre":"Satisfacci&oacute;n y Recomendaci&oacute;n",
 	"Promedio": 9
 }]

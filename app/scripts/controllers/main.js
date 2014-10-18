@@ -1,28 +1,29 @@
 'use strict';
 
-angular.module('infoturismoApp').controller('MainCtrl', ['$scope', '$window', 'infoturismoWebApi', 'labels', 'icons', 'routes', 'crumbs', function ($scope, $window, infoturismoWebApi, labels, icons, routes, crumbs) {
-    $scope.title = labels.general;
-    $scope.titleIcon = icons.general;
-
+angular.module('infoturismoApp').controller('MainCtrl', ['$scope', '$window','$sce', 'infoturismoWebApi', 'labels', 'icons', 'routes', 'crumbs', function ($scope, $window, $sce, infoturismoWebApi, labels, icons, routes, crumbs) {
     var breadcrumbs = crumbs.getGeneral();
 
+    $scope.title = labels.general;
+    $scope.titleIcon = icons.general;
     $scope.navegacion = breadcrumbs;
 
     $scope.onLabelClick = function(e){
-        $window.location = routes.acceso;
+        if($(e.target).text() === $sce.getTrustedHtml(labels.acceso)){
+            $window.location = routes.acceso.path;
+        }
     };
 
     infoturismoWebApi.getOverviewData()
         .success(function(data, status, headers, config) {
             $scope.datos = {
                 categories: [
-                    '<span style="font-family: FontAwesome;">\uf1ba<span><span>Acceso al Destino e Infraestructura</span>', 
-                    '<span style="font-family: FontAwesome;">\uf041<span><span>Atractivos y Oferta Turística</span>', 
-                    '<span style="font-family: FontAwesome;">\uf0f4<span><span>Consumo de Servicios</span>', 
-                    '<span style="font-family: FontAwesome;">\uf155<span><span>Costo</span>',
-                    '<span>Experiencia de Viaje</span><span style="font-family: FontAwesome;">\uf1d8</span>', 
-                    '<span>Imagen</span><span style="font-family: FontAwesome;">\uf02e</span>',
-                    '<span>Satisfacción y Recomendación</span><span style="font-family: FontAwesome;">\uf164</span>'
+                    '<span style="font-family: FontAwesome;">' + icons.accesoSvg + '<span><span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[0].Nombre)) + '</span>',
+                    '<span style="font-family: FontAwesome;">' + icons.atractivosSvg + '<span><span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[1].Nombre)) + '</span>', 
+                    '<span style="font-family: FontAwesome;">' + icons.consumoSvg + '<span><span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[2].Nombre)) + '</span>', 
+                    '<span style="font-family: FontAwesome;">' + icons.costoSvg + '<span><span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[3].Nombre)) + '</span>', 
+                    '<span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[4].Nombre)) + '</span><span style="font-family: FontAwesome;">'+ icons.experienciaSvg + '</span>',
+                    '<span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[5].Nombre)) + '</span><span style="font-family: FontAwesome;">'+ icons.imagenSvg + '</span>',
+                    '<span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[6].Nombre)) + '</span><span style="font-family: FontAwesome;">'+ icons.satisfaccionSvg + '</span>'
                 ],
                 series: [{
                     name: 'Promedio',

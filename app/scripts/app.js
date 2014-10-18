@@ -22,6 +22,10 @@ angular
         templateUrl: 'views/first.html',
         controller: 'FirstCtrl'
       })
+      .when('/:sectionId/:reactivoId', {
+        templateUrl: 'views/second.html',
+        controller: 'SecondCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

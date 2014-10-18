@@ -9,7 +9,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 		getGeneral: function() {
 			return {
 				name: labels.general,
-      			href: routes.general,
+      			href: routes.general.path,
       			icon: icons.general,
       			addCrumb: addCrumb
 			}
@@ -17,7 +17,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 		getAcceso: function() {
 			return {
 	    		name: labels.acceso,
-	    		href: routes.acceso,
+	    		href: routes.acceso.path,
 	    		icon: icons.acceso,
 	    		addCrumb: addCrumb
     		}
@@ -25,8 +25,16 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     	getSatisfaccion: function() {
     		return {
 	    		name: labels.satisfaccion,
-	    		href: routes.satisfaccion,
+	    		href: routes.satisfaccion.path,
 	    		icon: icons.satisfaccion,
+	    		addCrumb: addCrumb
+    		}
+    	},
+    	getSenalamiento: function() {
+    		return {
+	    		name: labels.senalamiento,
+	    		href: routes.acceso.reactivos.senalamiento.path,
+	    		icon: '',
 	    		addCrumb: addCrumb
     		}
     	}

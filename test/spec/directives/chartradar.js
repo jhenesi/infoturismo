@@ -34,7 +34,7 @@ describe('Unit: La directiva chartRadar', function() {
       scope.$apply();
 
       chart = element.highcharts();
-      labels = element.find(".highcharts-axis-labels > text");
+      labels = element.find(".highcharts-axis-labels > text").not(":last");
       tooltipLabel = element.find(".highcharts-tooltip> text");
     }));
 
@@ -67,8 +67,6 @@ describe('Unit: La directiva chartRadar', function() {
     });
 
     it("debe de mostrar las categorias proporcionadas en la grafica", function(){
-      var labels = $(element).find('.highcharts-xaxis-labels > text').not(":last");
-
       scope.datos.categories.map(function(categoria, i){
         expect($(labels[i]).text()).toBe(categoria);
       });
@@ -82,7 +80,7 @@ describe('Unit: La directiva chartRadar', function() {
       expect(chart.pointCount).toBe(dataLength);
     });
 
-    it("debe de mostrar un cursor para indicar que se puede dar click en alguna", function(){
+    it("debe de mostrar un cursor para indicar que se puede dar click en alguna categoria", function(){
       expect(labels.css("cursor")).toBe("pointer");
       expect(tooltipLabel.css("cursor")).toBe("pointer");
     });

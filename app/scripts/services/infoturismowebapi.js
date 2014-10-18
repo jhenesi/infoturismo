@@ -6,6 +6,9 @@ angular.module('infoturismoApp').service('infoturismoWebApi', ['$http', function
 	return {
 		getOverviewData: function() {
 			return $http.get(root +'/data/resumen.json');
+		},
+		getAccesoOverviewData: function(){
+			return $http.get(root +'/data/acceso.json');
 		}
 	};
 }]);
