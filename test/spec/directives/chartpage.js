@@ -8,13 +8,13 @@ describe('Unit: La directiva chartpage', function () {
 
   beforeEach(module('templates'));
 
-  beforeEach(inject(function ($rootScope, $compile) {
+  beforeEach(inject(function ($rootScope, $compile, $sce) {
     element = angular.element(
       '<chartpage><div>Hello World</div></chartpage>');
 
     scope = $rootScope.$new();
 
-    scope.title = "main";
+    scope.title = $sce.trustAsHtml("main");
     scope.titleIcon = "fa-globe";
 
     locations = [{
@@ -45,9 +45,9 @@ describe('Unit: La directiva chartpage', function () {
     scope.$apply();
   }));
 
-  it('debe mostrar el titulo correcto', function () {
-    expect(element.find("h1").text().trim()).toBe(scope.title)
-  });
+  it('debe mostrar el titulo correcto', inject(function ($sce) {
+    expect(element.find("h1").text().trim()).toBe($sce.getTrustedHtml(scope.title));
+  }));
 
   it('debe mostrar el icono correcto', function() {
     expect(element.find("i").first().hasClass("fa " + scope.titleIcon)).toBe(true);
