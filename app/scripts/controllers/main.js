@@ -11,6 +11,21 @@ angular.module('infoturismoApp').controller('MainCtrl', ['$scope', '$window','$s
         if($(e.target).text() === $sce.getTrustedHtml(labels.acceso)){
             $window.location = routes.acceso.path;
         }
+        if($(e.target).text() === $sce.getTrustedHtml(labels.atractivos)){
+            $window.location = routes.atractivos.path;
+        }
+        if($(e.target).text() === $sce.getTrustedHtml(labels.costo)){
+            $window.location = routes.costo.path;
+        }
+        if($(e.target).text() === $sce.getTrustedHtml(labels.experiencia)){
+            $window.location = routes.experiencia.path;
+        }
+         if($(e.target).text() === $sce.getTrustedHtml(labels.imagen)){
+            $window.location = routes.imagen.path;
+        }
+         if($(e.target).text() === $sce.getTrustedHtml(labels.satisfaccion)){
+            $window.location = routes.satisfaccion.path;
+        }
     };
 
     infoturismoWebApi.getOverviewData()

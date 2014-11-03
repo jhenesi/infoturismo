@@ -1,0 +1,21 @@
+[{
+	"Clave":"seguridad",
+	"Nombre":"Percepcion de seguridad",
+	"Promedio":8
+},{
+	"Clave":"imagenSitios",
+	"Nombre":"Imagen de los sitios naturales o culturales",
+	"Promedio":9
+},{
+	"Clave":"vendedores",
+	"Nombre":"Vendedores ambulantes",
+	"Promedio":6
+},{
+	"Clave":"transito",
+	"Nombre":"Transito vehicular",
+	"Promedio":7
+},{
+	"Clave":"limpieza ",
+	"Nombre":"Limpieza de calles y areas publicas",
+	"Promedio":8
+}]

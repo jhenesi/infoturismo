@@ -1,0 +1,17 @@
+[{
+	"Clave":"Satisfaccion",
+	"Nombre":"Nivel de satisfaccion",
+	"Promedio":8
+},{
+	"Clave":"Expectativas",
+	"Nombre":"Cumplimiento de expectativas",
+	"Promedio":7
+},{
+	"Clave":"Disposicion",
+	"Nombre":"Disposicion de visitarnos nuevamente",
+	"Promedio":9
+},{
+	"Clave":"recomendacion",
+	"Nombre":"Recomendaria a su amigos y familares visitarnos",
+	"Promedio":7
+}]

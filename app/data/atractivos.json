@@ -1,0 +1,25 @@
+[{
+	"Clave":"Atractivos y Servicios",
+	"Nombre":"Atractivos y los Servicios",
+	"Promedio":8
+},{
+	"Clave":"Conservacion de atractivos",
+	"Nombre":"Conservacion de los atractivos",
+	"Promedio":7
+},{
+	"Clave":"Variedad de atractivos",
+	"Nombre":"Variedad de los atractivos",
+	"Promedio":6
+},{
+	"Clave":"Calidad de atractivos",
+	"Nombre":"Calidad de los atractivos",
+	"Promedio":5
+},{
+	"Clave":"Atractivos culturales ",
+	"Nombre":"Conservacion de los atractivos culturales",
+	"Promedio":4
+},{
+	"Clave":"Atractivos Naturales",
+	"Nombre":"Conservacion de los atractivos naturales",
+	"Promedio":3
+}]

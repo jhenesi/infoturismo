@@ -1,0 +1,37 @@
+[{
+	"Clave":"hotel",
+	"Nombre":"Hotel",
+	"Promedio":8
+},{
+	"Clave":"notel",
+	"Nombre":"Motel",
+	"Promedio":7
+},{
+	"Clave":"campamento",
+	"Nombre":"Campamento/Tienda de campaña",
+	"Promedio":7
+},{
+	"Clave":"huespedes",
+	"Nombre":"Casa de Huespedes",
+	"Promedio":6
+},{
+	"Clave":"familiares",
+	"Nombre":"Casa de familares y amigos",
+	"Promedio":5
+},{
+	"Clave":"propia",
+	"Nombre":"Vivienda Propia",
+	"Promedio":8
+},{
+	"Clave":"rentada",
+	"Nombre":"Vivienda Rentada",
+	"Promedio":6
+},{
+	"Clave":"otro",
+	"Nombre":"Otro",
+	"Promedio":5
+},{
+	"Clave":"ninguno",
+	"Nombre":"Ninguno",
+	"Promedio":8
+}]
