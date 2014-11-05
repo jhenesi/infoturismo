@@ -25,7 +25,6 @@ body {
     padding-left: 0;
     height: 100%;
     margin-top: -100px
-   
 }
 
 #sidebar-wrapper {
@@ -40,8 +39,10 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     background: #fff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -103,13 +104,11 @@ body {
     #wrapper {
         padding-left: 225px;
         margin-top: -50px;
-         background-color:#b22222 ;
     }
 
     #page-wrapper {
         padding: 10px;
         padding-top: 60px;
-        
     }
 
     #sidebar-wrapper {
@@ -124,6 +123,9 @@ body {
         overflow-y: hidden;
         overflow-x: hidden;
         background: #fff;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
 
@@ -165,7 +167,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #C5A0A0;
+    color: #999;
 }
 
 .top-nav>li>a:hover,
@@ -174,7 +176,7 @@ body {
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
     color: #fff;
-    background-color: #8b0000 ;
+    background-color: #000;
 }
 
 .top-nav>.open>.dropdown-menu {
@@ -185,6 +187,7 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
 
@@ -237,7 +240,7 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #b22222 ;
+        background-color: #222;
     }
 
     .side-nav>li>a {
@@ -247,7 +250,7 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #8b0000 !important;
+        background-color: #000 !important;
     }
 }
 
@@ -259,7 +262,7 @@ ul.alert-dropdown {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
-    color: #C5A0A0;
+    color: #999;
 }
 
 .side-nav>li>ul>li>a:hover {

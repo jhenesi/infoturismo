@@ -10,7 +10,7 @@ describe('Unit: La directiva chartpage', function () {
 
   beforeEach(inject(function ($rootScope, $compile, $sce) {
     element = angular.element(
-      '<chartpage><div>Hello World</div></chartpage>');
+      '<chart-page><div>Hello World</div></chart-page>');
 
     scope = $rootScope.$new();
 

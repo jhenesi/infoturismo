@@ -1,0 +1,17 @@
+[{
+	"Clave":"Percepcion",
+	"Nombre":"Percepción General",
+	"Promedio":8
+},{
+	"Clave":"Limpieza",
+	"Nombre":"Limpieza",
+	"Promedio":7
+},{
+	"Clave":"Atencion",
+	"Nombre":"Atención del personal",
+	"Promedio":9
+},{
+	"Clave":"Facilidad",
+	"Nombre":"Facilidad de Elección de Opción de Hospedaje",
+	"Promedio":3
+}]

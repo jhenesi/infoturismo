@@ -135,6 +135,17 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		addCrumb: addCrumb
     		}
     	},
+
+        getHospedaje: function() {
+            return {
+                name: labels.hospedaje,
+                href: '', //routes.consumo.reactivos.hotel.path,
+                icon: icons.hospedaje,
+                addCrumb: addCrumb
+            }
+        },
+
+        /*
     	getConsumoHotel: function() {
 			return {
 	    		name: labels.hotel,
@@ -207,7 +218,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		icon:'',
 	    		addCrumb: addCrumb
     		}
-    	},
+    	},*/
     	
 
         //Crumbs Costo

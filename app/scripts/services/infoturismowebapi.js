@@ -13,9 +13,9 @@ angular.module('infoturismoApp').service('infoturismoWebApi', ['$http', function
 		getAtractivosOverviewData: function(){
 			return $http.get(root +'/data/atractivos.json');
 		},
-		getConsumoOverviewData: function(){
+		/*getConsumoOverviewData: function(){
 			return $http.get(root +'/data/consumo.json');
-		},
+		},*/
 		getCostoOverviewData: function() {
 			return $http.get(root +'/data/costo.json');
 		},
@@ -27,7 +27,12 @@ angular.module('infoturismoApp').service('infoturismoWebApi', ['$http', function
 		},
 		getSatisfaccionOverviewData: function() {
 			return $http.get(root +'/data/satisfaccion.json');
+		},
+		getConsumoOverviewData: function() {
+			return $http.get(root +'/data/consumo-resumen.json');
+		},
+		getHospedajeData: function() {
+			return $http.get(root +'/data/hospedaje.json');
 		}
-
 	};
 }]);

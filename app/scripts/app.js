@@ -17,14 +17,22 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .when('/:sectionId', {
+      }).
+      when('/acceso', {
         templateUrl: 'views/first.html',
-        controller: 'FirstCtrl'
-      })
-      .when('/:sectionId/:reactivoId', {
+        controller: 'AccesoCtrl'
+      }).
+      when('/acceso/senalamiento', {
         templateUrl: 'views/second.html',
-        controller: 'SecondCtrl'
+        controller: 'SenalamientoCtrl'
+      }).
+      when('/consumo', {
+        templateUrl: 'views/consumo.html',
+        controller: 'ConsumoCtrl'
+      }).
+      when('/consumo/hospedaje', {
+        templateUrl: 'views/first.html',
+        controller: 'HospedajeCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -16,6 +16,10 @@ angular.module('infoturismoApp').constant('icons', {
 	imagenSvg: "\uf02e",
 	satisfaccion: "fa fa-thumbs-o-up",
 	satisfaccionSvg: "\uf164",
+	hospedaje: 'fa-building',
+	alimentacion: 'fa-cutlery',
+	servicioExcursion: 'fa-binoculars',
+	transporteEstacionamiento: 'fa-bus',
 	menu: {
 		general: "fa fa-fw fa-globe",
 		acceso: "fa fa-fw fa-taxi",

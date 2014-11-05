@@ -1,17 +1,17 @@
-/*'use strict';
+'use strict';
 
-describe('Controller: SecondCtrl', function () {
+describe('Controller: SenalamientoCtrl', function () {
 
   // load the controller's module
   beforeEach(module('infoturismoApp'));
 
-  var SecondCtrl,
+  var SenalamientoCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    SecondCtrl = $controller('SecondCtrl', {
+    SenalamientoCtrl = $controller('SenalamientoCtrl', {
       $scope: scope
     });
   }));
@@ -19,4 +19,4 @@ describe('Controller: SecondCtrl', function () {
   it('should attach a list of awesomeThings to the scope', function () {
     expect(scope.awesomeThings.length).toBe(3);
   });
-});*/
+});

@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 describe('Unit: El controller MainCtrl', function () {
 
@@ -15,7 +15,7 @@ describe('Unit: El controller MainCtrl', function () {
     });
   }));
 
-  /*it('should attach a list of awesomeThings to the scope', function () {
+  it('should attach a list of awesomeThings to the scope', function () {
     expect(scope.awesomeThings.length).toBe(3);
-  });*/
-});
+  });
+});*/

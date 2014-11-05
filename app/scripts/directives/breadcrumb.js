@@ -17,7 +17,7 @@ angular.module('infoturismoApp').directive('breadcrumb', function () {
   				li = $("<li></li>");
   				i = $('<i></i>');
   				
-  				i.addClass(location.icon);
+  				i.addClass('fa ' + location.icon);
   				li.append(i);
 
   				if(location.next) {
