@@ -1,61 +1,76 @@
 'use strict';
 
 angular.module('infoturismoApp').controller('HospedajeCtrl', [
-	'$scope', 
+	'$scope',
+  '$window',
 	'labels', 
-	'icons', 
-	'crumbs', 
+	'icons',
+	'crumbs',
+  'routes',
 	'infoturismoWebApi',
 	function (
 		$scope, 
+    $window,
 		labels, 
 		icons, 
 		crumbs,
+    routes,
 		infoturismoWebApi
 	) {
-	$scope.title = labels.hospedaje;
-   	$scope.titleIcon = icons.hospedaje;
 
-   	var breadcrumbs = crumbs.getGeneral();
+      var config = {};
 
-   	breadcrumbs
-   		.addCrumb(crumbs.getConsumo())
-   		.addCrumb(crumbs.getHospedaje());
+      var route = '#/consumo/hospedaje';
 
-   	$scope.navegacion = breadcrumbs;
+      config[route] = {
+        breadcrumb: crumbs.getGeneral()
+          .addCrumb(crumbs.getConsumo())
+          .addCrumb(crumbs.getHospedaje()),
+        title: labels.hospedaje,
+        icon: icons.hospedaje,
+        rutas: {},
+        getData: infoturismoWebApi.getHospedajeOverviewData
+      };
 
-   	$scope.onLabelClick = function(e){
-    	if($(e.target).text() === $scope.datos.categories[0]) {
-    		console.log("clicked!!!")
-    	}
-	};
+      config[route].rutas['Percepción General'] = 
+        routes.consumo.hospedaje.percepcion.path;
+      config[route].rutas['Limpieza'] = 
+        routes.consumo.hospedaje.limpieza.path;
+      config[route].rutas['Atención del personal'] = 
+        routes.consumo.hospedaje.atencion.path;
+      config[route].rutas['Facilidad de Elección de Opción de Hospedaje'] = 
+        routes.consumo.hospedaje.facilidadEleccion.path;
 
-	infoturismoWebApi.getHospedajeData()
-		.success(function(data, status, headers, config) {
-	   		var categories, values;
+      $scope.title = config[route].title;
+      $scope.titleIcon = config[route].icons;
+      $scope.navegacion = config[route].breadcrumb;
 
-	    	values = data.map(function(item) {
-	       		return item.Promedio;
-	      	});
+      $scope.onLabelClick = function(e){
+        $window.location = config[route]
+          .rutas[angular.element(e.target).text()];
+      };
+
+    config[route].getData()
+      .success(function(data, status, headers, config) {
+          var categories, values;
+
+          categories = [];
+          values = [];
+
+          angular.forEach(data, function(item, i) {
+            categories.push(item.Nombre);
+            values.push(item.Promedio)
+          });
 
             $scope.datos = {
-                categories: [
-                	data[0].Nombre,
-                	data[1].Nombre,
-                	data[2].Nombre,
-                	data[3].Nombre
-        		],
+                categories: categories,
                 series: [{
                     name: 'Promedio',
-                    data: [
-						data[0].Promedio,
-						data[1].Promedio,
-						data[2].Promedio,
-						data[3].Promedio
-                    ]
+                    data: values
                 }]
             };
         })
         .error(function(data, status, headers, config) {
         });
-}]);
+  }
+]);

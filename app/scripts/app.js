@@ -17,7 +17,16 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      }).
+      })
+      .when('/acceso', {
+        templateUrl: 'views/first.html',
+        controller: 'FirstCtrl'
+      })
+      .when('/acceso/senalamiento', {
+        templateUrl: 'views/second.html',
+        controller: 'SenalamientoCtrl'
+      })
+      /*.
       when('/acceso', {
         templateUrl: 'views/first.html',
         controller: 'AccesoCtrl'
@@ -33,7 +42,11 @@ angular
       when('/consumo/hospedaje', {
         templateUrl: 'views/first.html',
         controller: 'HospedajeCtrl'
-      })
+      }).
+      when('/consumo/hospedaje/percepcion', {
+        templateUrl: 'views/second.html',
+        controller: 'HospedajePercepcionCtrl'
+      })*/
       .otherwise({
         redirectTo: '/'
       });

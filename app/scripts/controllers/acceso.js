@@ -3,7 +3,8 @@
 angular.module('infoturismoApp').controller('AccesoCtrl', [
 	'$scope', 
 	'$sce', 
-	'$window', 
+	'$window',
+	'$location',
 	'labels', 
 	'icons', 
 	'crumbs', 
@@ -12,69 +13,67 @@ angular.module('infoturismoApp').controller('AccesoCtrl', [
 	function (
 		$scope, 
 		$sce, 
-		$window, 
+		$window,
+		$location,
 		labels, 
 		icons, 
 		crumbs, 
 		routes, 
 		infoturismoWebApi
 	) {
-		$scope.title = labels.acceso;
-		$scope.titleIcon = icons.acceso;
+		var route = $location.url(),
+			config = {};
 
-		var breadcrumbs = crumbs.getGeneral();
+		config['/acceso'] = {
+	        breadcrumb: crumbs.getGeneral()
+	        	.addCrumb(crumbs.getAcceso()),
+	        title: labels.acceso,
+	        icon: icons.acceso,
+	        rutas: {},
+	        getData: infoturismoWebApi.getAccesoOverviewData
+	    };
 
-		breadcrumbs.addCrumb(crumbs.getAcceso());
+	    config['/acceso'].rutas['Señalamiento para Arribar'] = 
+	    	routes.acceso.senalamiento.path;
+		config['/acceso'].rutas['Opciones de Transporte para Arribar'] = 
+			routes.acceso.opciones.path;
+		config['/acceso'].rutas['Calidad de la Infraestructura de Acceso'] = 
+			routes.acceso.calidad.path;
+		config['/acceso'].rutas['Mantenimiento y Calidad del Medio de Transporte'] = 
+			routes.acceso.mantenimiento.path;
+		config['/acceso'].rutas['Atención del personal de Transporte'] = 
+			routes.acceso.atencion.path;
 
-		$scope.navegacion = breadcrumbs;
+		$scope.title = config[route].title;
+      	$scope.titleIcon = config[route].icons;
+      	$scope.navegacion = config[route].breadcrumb;
 
-		$scope.onLabelClick = function(e){
-			if($(e.target).text() === $scope.datos.categories[0]) {
-				$window.location = routes.acceso.reactivos.senalamiento.path;
-			}
-			if($(e.target).text() === $scope.datos.categories[1]) {
-				$window.location = routes.acceso.reactivos.opciones.path;
-			}
-			if($(e.target).text() === $scope.datos.categories[2]) {
-				$window.location = routes.acceso.reactivos.calidad.path;
-			}
-			if($(e.target).text() === $scope.datos.categories[3]) {
-				$window.location = routes.acceso.reactivos.mantenimiento.path;
-			}
-			if($(e.target).text() === $scope.datos.categories[4]) {
-				$window.location = routes.acceso.reactivos.atencion.path;
-			}
-		};
+      	$scope.onLabelClick = function(e){
+        	$window.location = config[route]
+          		.rutas[angular.element(e.target).text()];
+      	};
 
-		infoturismoWebApi.getAccesoOverviewData()
-			.success(function(data, status, headers, config) {
-		    	var categories, values;
+		config[route].getData()
+      		.success(function(data, status, headers, config) {
+          		var categories, values;
 
-		    	values = data.map(function(item) {
-		    		return item.Promedio;
-		    	});
+	          	categories = [];
+	          	values = [];
 
-		        $scope.datos = {
-		            categories: [
-		            	$sce.getTrustedHtml($sce.trustAsHtml(data[0].Nombre)),
-		            	$sce.getTrustedHtml($sce.trustAsHtml(data[1].Nombre)),
-		            	$sce.getTrustedHtml($sce.trustAsHtml(data[2].Nombre)),
-		            	$sce.getTrustedHtml($sce.trustAsHtml(data[3].Nombre)),
-		            	$sce.getTrustedHtml($sce.trustAsHtml(data[4].Nombre))
-		    		],
-		            series: [{
-		                name: 'Promedio',
-		                data: [
-							data[0].Promedio,
-							data[1].Promedio,
-							data[2].Promedio,
-							data[3].Promedio,
-							data[4].Promedio,
-		                ]
-		            }]
-		        };
-		    })
-		    .error(function(data, status, headers, config) {
-		    });
+	          	angular.forEach(data, function(item, i) {
+	            	categories.push(item.Nombre);
+	            	values.push(item.Promedio)
+	          	});
+
+	            $scope.datos = {
+	                categories: categories,
+	                series: [{
+	                    name: 'Promedio',
+	                    data: values
+	                }]
+	            };
+	        })
+        	.error(function(data, status, headers, config) {
+        	});
 	}
 ]);

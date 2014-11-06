@@ -4,7 +4,7 @@
 	"Promedio": 9
 },{
 	"Clave":"Atractivos",
-	"Nombre":"Atractivos y Oferta Tur&iacute;stica",
+	"Nombre":"Atractivos y Oferta Turística",
 	"Promedio": 8
 },{
 	"Clave":"Consumo",
@@ -23,7 +23,7 @@
 	"Nombre":"Imagen",
 	"Promedio": 8
 },{
-	"Clave":"Satisfacción",
-	"Nombre":"Satisfacci&oacute;n y Recomendaci&oacute;n",
+	"Clave":"Satisfaccion",
+	"Nombre":"Satisfacción y Recomendación",
 	"Promedio": 9
 }]

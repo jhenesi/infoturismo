@@ -4,7 +4,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	var addCrumb = function(crumb) {
 		this.next = crumb;
 		return crumb;
-	}
+	};
 	return {
 		getGeneral: function() {
 			return {
@@ -12,7 +12,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
       			href: routes.general.path,
       			icon: icons.general,
       			addCrumb: addCrumb
-			}
+			};
 		},
 
         //Crumbs Acceso al Destino e Infraestructura
@@ -22,51 +22,48 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.acceso.path,
 	    		icon: icons.acceso,
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
         getAccesoSenalamiento: function() {
             return {
                 name: labels.senalamiento,
-                href: routes.acceso.reactivos.senalamiento.path,
-                icon: '',
+                href: routes.acceso.senalamiento.path,
+                icon: icons.pieChart,
                 addCrumb: addCrumb
-            }
+            };
         },
         getAccesoOpciones: function() {
             return {
                 name: labels.opciones,
-                href: routes.acceso.reactivos.opciones.path,
+                href: routes.acceso.opciones.path,
                 icon: '',
                 addCrumb: addCrumb
-            }
+            };
         },
         getAccesoCalidad: function() {
             return {
                 name: labels.calidad,
-                href: routes.acceso.reactivos.calidad.path,
+                href: routes.acceso.calidad.path,
                 icon: '',
                 addCrumb: addCrumb
-            }
+            };
         },
         getAccesoMantenimiento: function() {
             return {
                 name: labels.mantenimiento,
-                href: routes.acceso.reactivos.mantenimiento.path,
+                href: routes.acceso.mantenimiento.path,
                 icon: '',
                 addCrumb: addCrumb
-            }
+            };
         },
         getAccesoAtencion: function() {
             return {
                 name: labels.atencion,
-                href: routes.acceso.reactivos.atencion.path,
+                href: routes.acceso.atencion.path,
                 icon: '',
                 addCrumb: addCrumb
-            }
+            };
         },
-
-
-
 
     	// Crumbs Atractivos y Oferta Turistica
     	getAtractivos: function() {
@@ -75,7 +72,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.atractivos.path,
 	    		icon: icons.atractivos,
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
     	getAtractivosServicios: function() {
 			return {
@@ -83,7 +80,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.atractivos.reactivos.atractivosServicios.path,
 	    		icon: '',
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
     	getAtractivosConcervacion: function() {
 			return {
@@ -91,7 +88,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.atractivos.reactivos.atractivosConservacion.path,
 	    		icon: '',
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
     	getAtractivosVariedad: function() {
 			return {
@@ -99,7 +96,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.atractivos.reactivos.atractivosVariedad.path,
 	    		icon: '',
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
     	getAtractivosCalidad: function() {
 			return {
@@ -107,7 +104,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.atractivos.reactivos.atractivosCalidad.path,
 	    		icon: '',
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
     	getAtractivosCulturales: function() {
 			return {
@@ -115,7 +112,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.atractivos.reactivos.atractivosCulturales.path,
 	    		icon: '',
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
     	getAtractivosNaturales: function() {
 			return {
@@ -123,7 +120,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.atractivos.reactivos.atractivosNaturales.path,
 	    		icon: '',
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
 
     	//Crumbs Consumo de servicios
@@ -133,16 +130,25 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
 	    		href: routes.consumo.path,
 	    		icon: icons.consumo,
 	    		addCrumb: addCrumb
-    		}
+    		};
     	},
 
         getHospedaje: function() {
             return {
                 name: labels.hospedaje,
-                href: '', //routes.consumo.reactivos.hotel.path,
+                href: routes.consumo.hospedaje.path,
                 icon: icons.hospedaje,
                 addCrumb: addCrumb
-            }
+            };
+        },
+
+        getHospedajePercepcion: function() {
+            return {
+                name: labels.hospedajePercepcion,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
         },
 
         /*
@@ -228,7 +234,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.costo.path,
     			icon: icons.costo,
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getCostoHospedaje: function() {
     		return {
@@ -236,7 +242,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.costo.reactivos.hospedaje.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getCostoTransporte: function() {
     		return {
@@ -244,7 +250,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.costo.reactivos.transporte.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getCostoAlimentos: function() {
     		return {
@@ -252,7 +258,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.costo.reactivos.alimentos.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getCostoExcursion: function() {
     		return {
@@ -260,7 +266,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.costo.reactivos.excursion.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getCostoEstacionamiento: function() {
     		return {
@@ -268,7 +274,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.costo.reactivos.estacionamiento.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getExperiencia: function() {
     		return {
@@ -276,7 +282,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.experiencia.path,
     			icon: icons.experiencia,
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getExperienciaObregon: function() {
     		return {
@@ -284,7 +290,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.experiencia.reactivos.obregon.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getExperienciaHospitalidad: function() {
     		return {
@@ -292,7 +298,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.experiencia.reactivos.hospitalidad.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getExperienciaNaturales: function() {
     		return {
@@ -300,7 +306,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.experiencia.reactivos.naturales.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getExperienciaDiferente: function() {
     		return {
@@ -308,7 +314,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.experiencia.reactivos.diferente.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getExperienciaDisponibilidad: function() {
     		return {
@@ -316,7 +322,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.experiencia.reactivos.disponibilidad.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
 
 		//Imagen
@@ -326,7 +332,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.imagen.path,
     			icon: icons.imagen,
     			addCrumb: addCrumb
-    		}
+    		};
     	},  	
     	getImagenPercepcion: function() {
     		return {
@@ -334,7 +340,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.imagen.reactivos.percepciones.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getImagenSitios: function() {
     		return {
@@ -342,7 +348,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.imagen.reactivos.imagenes.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getImagenAmbulantes: function() {
     		return {
@@ -350,7 +356,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.imagen.reactivos.ambulantes.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getImagenTrasito: function() {
     		return {
@@ -358,7 +364,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.imagen.reactivos.transito.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
     	getImagenLimpieza: function() {
     		return {
@@ -366,7 +372,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.imagen.reactivos.limpieza.path,
     			icon: '',
     			addCrumb: addCrumb
-    		}
+    		};
     	},
 
 
@@ -377,7 +383,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			href: routes.satisfaccion.path,
     			icon: icons.satisfaccion,
     			addCrumb: addCrumb
-    		}
+    		};
     	},
         getSatisfaccionNivel: function() {
             return {
@@ -385,7 +391,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
                 href: routes.satisfaccion.reactivos.nivelSatisfaccion.path,
                 icon: '',
                 addCrumb: addCrumb
-            }
+            };
         },
         getSatisfaccionExpectativas: function() {
             return {
@@ -393,7 +399,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
                 href: routes.satisfaccion.reactivos.expectativas.path,
                 icon: '',
                 addCrumb: addCrumb
-            }
+            };
         },
         getSatisfaccionDisposicion: function() {
             return {
@@ -401,7 +407,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
                 href: routes.satisfaccion.reactivos.disposicion.path,
                 icon: '',
                 addCrumb: addCrumb
-            }
+            };
         },
         getSatisfaccionRecomendacion: function() {
             return {
@@ -409,9 +415,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
                 href: routes.satisfaccion.reactivos.recomendacion.path,
                 icon: '',
                 addCrumb: addCrumb
-            }
+            };
         }
-
-
 	};
 }]);

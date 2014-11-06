@@ -80,7 +80,7 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
                         series: series,
                         credits: {
                             enabled: false
-                        },
+                        }
                     });
 
                     scope.isRendered = true;

@@ -19,39 +19,35 @@ angular.module('infoturismoApp').controller('MainCtrl', [
         routes, 
         crumbs
     ) {
-        var breadcrumbs = crumbs.getGeneral();
+        var breadcrumbs = crumbs.getGeneral(),
+            rutas = {};
 
         $scope.title = labels.general;
         $scope.titleIcon = icons.general;
+
         $scope.navegacion = breadcrumbs;
 
+        rutas['Acceso al Destino e Infraestructura'] = routes.acceso.path;
+        rutas['Atractivos y Oferta Turística'] = routes.atractivos.path;
+        rutas['Consumo de Servicios'] = routes.consumo.path;
+        rutas['Costo'] = routes.costo.path;
+        rutas['Experiencia de Viaje'] = routes.experiencia.path;
+        rutas['Imagen'] = routes.imagen.path;
+        rutas['Satisfacción y Recomendación'] = routes.satisfaccion.path;
+
         $scope.onLabelClick = function(e){
-            if($(e.target).text() === $sce.getTrustedHtml(labels.acceso)){
-                $window.location = routes.acceso.path;
-            }
-            if($(e.target).text() === $sce.getTrustedHtml(labels.atractivos)){
-                $window.location = routes.atractivos.path;
-            }
-            if($(e.target).text() === $sce.getTrustedHtml(labels.consumo)){
-                $window.location = routes.consumo.path;
-            }
-            if($(e.target).text() === $sce.getTrustedHtml(labels.costo)){
-                $window.location = routes.costo.path;
-            }
-            if($(e.target).text() === $sce.getTrustedHtml(labels.experiencia)){
-                $window.location = routes.experiencia.path;
-            }
-             if($(e.target).text() === $sce.getTrustedHtml(labels.imagen)){
-                $window.location = routes.imagen.path;
-            }
-             if($(e.target).text() === $sce.getTrustedHtml(labels.satisfaccion)){
-                $window.location = routes.satisfaccion.path;
-            }
+            $window.location = rutas[angular.element(e.target).text()]
         };
 
         infoturismoWebApi.getOverviewData()
             .success(function(data, status, headers, config) {
-                $scope.datos = {
+               var values = [];
+
+                angular.forEach(data, function(item, i) {
+                    values.push(item.Promedio)
+                });
+
+               $scope.datos = {
                     categories: [
                         '<span style="font-family: FontAwesome;">' + icons.accesoSvg + '<span><span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[0].Nombre)) + '</span>',
                         '<span style="font-family: FontAwesome;">' + icons.atractivosSvg + '<span><span>' + $sce.getTrustedHtml($sce.trustAsHtml(data[1].Nombre)) + '</span>', 
@@ -63,15 +59,7 @@ angular.module('infoturismoApp').controller('MainCtrl', [
                     ],
                     series: [{
                         name: 'Promedio',
-                        data: [
-                            data[0].Promedio,
-                            data[1].Promedio,
-                            data[2].Promedio,
-                            data[3].Promedio,
-                            data[4].Promedio,
-                            data[5].Promedio,
-                            data[6].Promedio
-                        ]
+                        data: values
                     }]
                 };
             })
