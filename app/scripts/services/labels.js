@@ -26,16 +26,7 @@ angular.module('infoturismoApp').service('labels',['$sce', function($sce) {
 	 	//Labels Consumo
 	 	consumo: $sce.trustAsHtml('Consumo de Servicios'),
 	 	hospedaje: $sce.trustAsHtml('Hospedaje'),
-	 	hospedajePercepcion: $sce.trustAsHtml('Percepci&oacute;n'),
-	 	/*hotel: $sce.trustAsHtml('Hotel'),
-	 	motel: $sce.trustAsHtml('Motel'),
-	 	campamento: $sce.trustAsHtml('Campamento/Tienda de campaña'),
-	 	huespedes: $sce.trustAsHtml('Casa de huespedes'),
-	 	familiares: $sce.trustAsHtml('Casa de familiares y amigos'),
-	 	propia: $sce.trustAsHtml('Vivienda propia'),
-	 	rentada: $sce.trustAsHtml('Vivienda rentada'),
-	 	otro: $sce.trustAsHtml('Otro'),
-	 	ninguno: $sce.trustAsHtml('Ninguno'),*/
+	 	hospedajePercepcion: $sce.trustAsHtml('Percepci&oacute;n General'),
 
 	 	//Labels Costo
 	 	costo: $sce.trustAsHtml('Costo'),

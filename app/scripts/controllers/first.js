@@ -29,20 +29,45 @@ angular.module('infoturismoApp').controller('FirstCtrl', [
 		        getData: infoturismoWebApi.getAccesoOverviewData
 		    };
 
-		    config['/acceso'].breadcrumb = crumbs.getGeneral();
-		    config['/acceso'].breadcrumb.addCrumb(crumbs.getAcceso()),
+		    var acceso = config['/acceso'];
+
+		    acceso.breadcrumb = crumbs.getGeneral();
+		    acceso.breadcrumb.addCrumb(crumbs.getAcceso()),
 
 
-		    config['/acceso'].rutas['Señalamiento para Arribar'] = 
+		    acceso.rutas['Señalamiento para Arribar'] = 
 		    	routes.acceso.senalamiento.path;
-			config['/acceso'].rutas['Opciones de Transporte para Arribar'] = 
+			acceso.rutas['Opciones de Transporte para Arribar'] = 
 				routes.acceso.opciones.path;
-			config['/acceso'].rutas['Calidad de la Infraestructura de Acceso'] = 
+			acceso.rutas['Calidad de la Infraestructura de Acceso'] = 
 				routes.acceso.calidad.path;
-			config['/acceso'].rutas['Mantenimiento y Calidad del Medio de Transporte'] = 
+			acceso.rutas['Mantenimiento y Calidad del Medio de Transporte'] = 
 				routes.acceso.mantenimiento.path;
-			config['/acceso'].rutas['Atención del personal de Transporte'] = 
+			acceso.rutas['Atención del personal de Transporte'] = 
 				routes.acceso.atencion.path;
+
+			config['/consumo/hospedaje'] = {
+				title: labels.hospedaje,
+        		icon: icons.hospedaje,
+        		rutas: {},
+        		getData: infoturismoWebApi.getHospedajeOverviewData
+			};
+
+			var consumoHospedaje = config['/consumo/hospedaje'];
+
+			consumoHospedaje.breadcrumb = crumbs.getGeneral();
+			consumoHospedaje.breadcrumb
+				.addCrumb(crumbs.getConsumo())
+				.addCrumb(crumbs.getHospedaje());
+
+			consumoHospedaje.rutas['Percepción General'] = 
+	        	routes.consumo.hospedaje.percepcion.path;
+	      	consumoHospedaje.rutas['Limpieza'] = 
+	        	routes.consumo.hospedaje.limpieza.path;
+	      	consumoHospedaje.rutas['Atención del personal'] = 
+	        	routes.consumo.hospedaje.atencion.path;
+	      	consumoHospedaje.rutas['Facilidad de Elección de Opción de Hospedaje'] = 
+	        	routes.consumo.hospedaje.facilidadEleccion.path;
 
 			return config[route];
 		};

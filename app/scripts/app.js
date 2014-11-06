@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name infoturismoApp
- * @description
- * # infoturismoApp
- *
- * Main module of the application.
- */
 angular
   .module('infoturismoApp', [
     'ngRoute'
@@ -24,29 +16,20 @@ angular
       })
       .when('/acceso/senalamiento', {
         templateUrl: 'views/second.html',
-        controller: 'SenalamientoCtrl'
+        controller: 'SecondCtrl'
       })
-      /*.
-      when('/acceso', {
+      .when('/consumo', {
+        templateUrl: 'views/sections.html',
+        controller: 'SectionsCtrl'
+      })
+      .when('/consumo/hospedaje', {
         templateUrl: 'views/first.html',
-        controller: 'AccesoCtrl'
-      }).
-      when('/acceso/senalamiento', {
+        controller: 'FirstCtrl'
+      })
+      .when('/consumo/hospedaje/percepcion', {
         templateUrl: 'views/second.html',
-        controller: 'SenalamientoCtrl'
-      }).
-      when('/consumo', {
-        templateUrl: 'views/consumo.html',
-        controller: 'ConsumoCtrl'
-      }).
-      when('/consumo/hospedaje', {
-        templateUrl: 'views/first.html',
-        controller: 'HospedajeCtrl'
-      }).
-      when('/consumo/hospedaje/percepcion', {
-        templateUrl: 'views/second.html',
-        controller: 'HospedajePercepcionCtrl'
-      })*/
+        controller: 'SecondCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
