@@ -22,108 +22,14 @@
     <![endif]-->
     <div id="wrapper" ng-controller="LayoutCtrl" ng-class="{'': !isFiltersToggled, 'toggled': isFiltersToggled}">
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand clickable">{{labels.marca}}</a>
-            </div>
-            <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                <li class="dropdown clickable">
-                    <a class="dropdown-toggle" data-toggle="dropdown"><i class={{menuIcons.usuario}}></i><b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a><i class={{menuIcons.cerrarSesion}}></i> <span ng-bind-html="labels.cerrarSesion"></span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="btn-filters clickable">
-                    <a id="filters-toggle" ng-click="toggleFilters()"><i class={{menuIcons.filtros}}></i></a>
-                </li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li ng-class="{active: activeItem == 1}">
-                        <a id="general" href="#/" ng-click="menuItemClick($event)"><i class={{menuIcons.general}}></i> {{labels.general}}</a>
-                    </li>
-                    <li ng-class="{active: activeItem == 2}">
-                        <a id="acceso" href="#/acceso" ng-click="menuItemClick($event)"><i class={{menuIcons.acceso}}></i> {{labels.acceso}}</a>
-                    </li>
-                    <li ng-class="{active: activeItem == 3}">
-                        <a id="atractivos" href="#/atractivos" ng-click="menuItemClick($event)"><i class={{menuIcons.atractivos}}></i> <span ng-bind-html="labels.atractivos"></a>
-                    </li>
-                    <li ng-class="{active: activeItem == 4}">
-                        <a id="consumo" href="#/consumo" ng-click="menuItemClick($event)"><i class={{menuIcons.consumo}}></i> {{labels.consumo}}</a>
-                    </li>
-                    <li ng-class="{active: activeItem == 5}">
-                        <a id="costo" href="#/costo" ng-click="menuItemClick($event)"><i class={{menuIcons.costo}}></i> {{labels.costo}}</a>
-                    </li>
-                    <li ng-class="{active: activeItem == 6}">
-                        <a id="experiencia" href="#/experiencia" ng-click="menuItemClick($event)"><i class={{menuIcons.experiencia}}></i> {{labels.experiencia}}</a>
-                    </li>
-                    <li ng-class="{active: activeItem == 7}">
-                        <a id="imagen" href="#/imagen" ng-click="menuItemClick($event)"><i class={{menuIcons.imagen}}></i> {{labels.imagen}}</a>
-                    </li>
-                    <li ng-class="{active: activeItem == 8}">
-                        <a id="satisfaccion" href="#/satisfaccion" ng-click="menuItemClick($event)"><i class={{menuIcons.satisfaccion}}></i> <span ng-bind-html="labels.satisfaccion"></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
+        <div ng-include="'templates/navigation.html'"></div>
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <label for="input1">Del:</label>
-                            <input id="input1" class="form-control" placeholder="DD/MM/AAAA"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="input1">Al:</label>
-                            <input id="Text1" class="form-control" placeholder="DD/MM/AAAA"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Sexo:</label>
-                            <label class="radio-inline">
-                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked="">M
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline2" value="option2">F
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="select1">Ocupacion:</label>
-                            <select id="select1" class="form-control">
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="select2">Escolaridad:</label>
-                            <select id="select2" class="form-control">
-                            </select>
-                        </div>
-                        <button type="button" class="btn btn-primary">Aplicar</button>
-                    </div>   
-                </div>
-            </div>
-        </div>
+        <div ng-include="'templates/filter-menu.html'"></div>
         <!-- Content -->
         <div id="page-wrapper" ng-view="">
         </div>
     </div>
     
-
-
-    
-
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -145,29 +51,27 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/directives/chartradar.js"></script>
-        <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/infoturismowebapi.js"></script>
-        <script src="scripts/directives/breadcrumb.js"></script>
-        <script src="scripts/directives/chartpage.js"></script>
-        <script src="scripts/controllers/layout.js"></script>
-        <script src="scripts/controllers/first.js"></script>
         <script src="scripts/services/labels.js"></script>
         <script src="scripts/services/icons.js"></script>
         <script src="scripts/services/routes.js"></script>
         <script src="scripts/services/crumbs.js"></script>
+        <script src="scripts/services/filters.js"></script>
+
         <script src="scripts/directives/chartbar.js"></script>
-        <script src="scripts/controllers/second.js"></script>
-        <script src="scripts/controllers/consumo.js"></script>
-        <script src="scripts/directives/panelpage.js"></script>
-        <script src="scripts/directives/overviewpanel.js"></script>
-        <script src="scripts/controllers/hospedaje.js"></script>
-        <script src="scripts/controllers/acceso.js"></script>
-        <script src="scripts/controllers/senalamiento.js"></script>
+        <script src="scripts/directives/chartradar.js"></script>
         <script src="scripts/directives/chartpie.js"></script>
-        <script src="scripts/controllers/hospedajepercepcion.js"></script>
-        <script src="scripts/controllers/hospedaje-percepcion.js"></script>
+        <script src="scripts/directives/chartpage.js"></script>
+        <script src="scripts/directives/panelpage.js"></script>
+        <script src="scripts/directives/breadcrumb.js"></script>
+        <script src="scripts/directives/overviewpanel.js"></script>
+
+        <script src="scripts/controllers/layout.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/first.js"></script>
+        <script src="scripts/controllers/second.js"></script>
         <script src="scripts/controllers/sections.js"></script>
+        <script src="scripts/controllers/filter-bar.js"></script>
         <!-- endbuild -->
 </body>
 </html>

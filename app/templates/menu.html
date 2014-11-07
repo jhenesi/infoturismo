@@ -1,0 +1,28 @@
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav side-nav">
+        <li ng-class="{active: activeItem == 1}">
+            <a id="general" href="#/" ng-click="menuItemClick($event)"><i class={{menuIcons.general}}></i> {{labels.general}}</a>
+        </li>
+        <li ng-class="{active: activeItem == 2}">
+            <a id="acceso" href="#/acceso" ng-click="menuItemClick($event)"><i class={{menuIcons.acceso}}></i> {{labels.acceso}}</a>
+        </li>
+        <li ng-class="{active: activeItem == 3}">
+            <a id="atractivos" href="#/atractivos" ng-click="menuItemClick($event)"><i class={{menuIcons.atractivos}}></i> <span ng-bind-html="labels.atractivos"></a>
+        </li>
+        <li ng-class="{active: activeItem == 4}">
+            <a id="consumo" href="#/consumo" ng-click="menuItemClick($event)"><i class={{menuIcons.consumo}}></i> {{labels.consumo}}</a>
+        </li>
+        <li ng-class="{active: activeItem == 5}">
+            <a id="costo" href="#/costo" ng-click="menuItemClick($event)"><i class={{menuIcons.costo}}></i> {{labels.costo}}</a>
+        </li>
+        <li ng-class="{active: activeItem == 6}">
+            <a id="experiencia" href="#/experiencia" ng-click="menuItemClick($event)"><i class={{menuIcons.experiencia}}></i> {{labels.experiencia}}</a>
+        </li>
+        <li ng-class="{active: activeItem == 7}">
+            <a id="imagen" href="#/imagen" ng-click="menuItemClick($event)"><i class={{menuIcons.imagen}}></i> {{labels.imagen}}</a>
+        </li>
+        <li ng-class="{active: activeItem == 8}">
+            <a id="satisfaccion" href="#/satisfaccion" ng-click="menuItemClick($event)"><i class={{menuIcons.satisfaccion}}></i> <span ng-bind-html="labels.satisfaccion"></a>
+        </li>
+    </ul>
+</div>

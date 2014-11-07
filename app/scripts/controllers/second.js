@@ -5,7 +5,8 @@ angular.module('infoturismoApp').controller('SecondCtrl', [
 	'$location',
 	'labels', 
 	'icons', 
-	'crumbs', 
+	'crumbs',
+	'filters',
 	'infoturismoWebApi', 
 	function (
 		$scope, 
@@ -13,6 +14,7 @@ angular.module('infoturismoApp').controller('SecondCtrl', [
 		labels, 
 		icons, 
 		crumbs, 
+		filters,
 		infoturismoWebApi
 	) {
 		var getConfig = function(route) {
