@@ -13,24 +13,25 @@ angular.module('infoturismoApp').directive('chartBar', function () {
       		if(scope.isRendered === undefined) 
                 scope.isRendered = false;
 
-       		var draw = function(element, categories, seriesData) {
+       		var draw = function(element, categories, series) {
        			var series, chart, labels, tooltipLabel;
 
-                if(!seriesData || !categories)
+                if(!series || !categories)
                     return;
-
-                series = seriesData.map(function(item) {
-                    return {
-                        name: item.name,
-                        data: item.data,
-                        showInLegend: false
-                    };
-                });
 
                 if(!scope.isRendered) {
 					element.highcharts({
 		        		chart: {
-		                	type: 'bar'
+		                	type: 'bar',
+                            events: {
+                                redraw: function(){
+                                    /*labels.each(function(i, item){
+                                        if(i > categories.length - 1){
+                                            angular.element(item).attr("visibility","hidden");
+                                        }
+                                    });*/
+                                }
+                            }
 		            	},
 		            	exporting: { enabled: false },
 		            	title: {
@@ -48,7 +49,8 @@ angular.module('infoturismoApp').directive('chartBar', function () {
 		            	yAxis: {
 			                stackLabels: {
 			                    formatter: function() {
-			                        return this.axis.chart.xAxis[0].categories[this.x];
+                                    //var index = Object.keys(this.points)[0].split(',')[0];
+			                        return /*(index == categories.length) ? */this.axis.chart.xAxis[0].categories[this.x] /*: ''*/;
 			                    },
 			                    enabled: true,           
 			                    verticalAlign: 'top',     
@@ -72,11 +74,18 @@ angular.module('infoturismoApp').directive('chartBar', function () {
 		                  	}
 			            },
 			            plotOptions: {
-			                bar: {
-			                    stacking: 'normal'
-			                }
-			            },
-			            legend: {
+                            series: {
+                                stacking: 'normal'
+                            },
+                            bar: {
+                                events: {
+                                    legendItemClick: function () {
+                                        console.log(element.find(".highcharts-stack-labels > text").length);
+                                    }
+                                }
+                            }
+                        },
+			            /*legend: {
 			                layout: 'vertical',
 			                align: 'right',
 			                verticalAlign: 'top',
@@ -86,7 +95,7 @@ angular.module('infoturismoApp').directive('chartBar', function () {
 			                borderWidth: 1,
 			                backgroundColor: '#FFFFFF',
 			                shadow: true
-			            },
+			            },*/
 			            credits: {
 			                enabled: false
 			            },
@@ -102,18 +111,20 @@ angular.module('infoturismoApp').directive('chartBar', function () {
                         chart.series[0].remove(true);
 
                     series.map(function(item) {
-                        chart.addSeries({
-                            name: item.name,
-                            data: item.data,
-                            pointPlacement: 'on',
-                            showInLegend: false
-                        });
+                        chart.addSeries(item);
                     });
 
                     chart.xAxis[0].setCategories(categories);
                 }
 
-            	labels = element.find(".highcharts-stack-labels > text");
+                labels = element.find(".highcharts-stack-labels > text");
+
+                /*labels.each(function(i, item){
+                    if(i > categories.length - 1){
+                        angular.element(item).attr("visibility","hidden");
+                    }
+                });*/
+
             	tooltipLabel = element.find(".highcharts-tooltip > text");
 
        			labels.css("cursor", "pointer");

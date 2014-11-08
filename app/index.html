@@ -22,9 +22,9 @@
     <![endif]-->
     <div id="wrapper" ng-controller="LayoutCtrl" ng-class="{'': !isFiltersToggled, 'toggled': isFiltersToggled}">
         <!-- Navigation -->
-        <div ng-include="'templates/navigation.html'"></div>
+        <div ng-include="'views/partials/navigation.html'"></div>
         <!-- Sidebar -->
-        <div ng-include="'templates/filter-menu.html'"></div>
+        <div ng-include="'views/partials/filter-menu.html'"></div>
         <!-- Content -->
         <div id="page-wrapper" ng-view="">
         </div>
@@ -58,13 +58,13 @@
         <script src="scripts/services/crumbs.js"></script>
         <script src="scripts/services/filters.js"></script>
 
-        <script src="scripts/directives/chartbar.js"></script>
-        <script src="scripts/directives/chartradar.js"></script>
-        <script src="scripts/directives/chartpie.js"></script>
-        <script src="scripts/directives/chartpage.js"></script>
-        <script src="scripts/directives/panelpage.js"></script>
+        <script src="scripts/directives/chart-bar.js"></script>
+        <script src="scripts/directives/chart-radar.js"></script>
+        <script src="scripts/directives/chart-pie.js"></script>
+        <script src="scripts/directives/chart-page.js"></script>
+        <script src="scripts/directives/panel-page.js"></script>
         <script src="scripts/directives/breadcrumb.js"></script>
-        <script src="scripts/directives/overviewpanel.js"></script>
+        <script src="scripts/directives/overview-panel.js"></script>
 
         <script src="scripts/controllers/layout.js"></script>
         <script src="scripts/controllers/main.js"></script>

@@ -11,7 +11,7 @@ angular.module('infoturismoApp').directive('overviewPanel', function () {
 		},
 		replace: true,
 		transclude: true,
-      	templateUrl: 'templates/overviewpanel.html',
+      	templateUrl: 'templates/overview-panel.html',
       	restrict: 'E'
     };
 });

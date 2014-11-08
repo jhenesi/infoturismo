@@ -4,7 +4,7 @@ angular.module('infoturismoApp').directive('chartPage', function () {
 	return {
 		replace: true,
 		transclude: true,
-      	templateUrl: 'templates/chartpage.html',
+      	templateUrl: 'templates/chart-page.html',
       	restrict: 'E'
     };
 });

@@ -3,7 +3,7 @@
 angular.module('infoturismoApp').controller('MainCtrl', [
     '$scope', 
     '$window',
-    '$sce', 
+    '$sce',
     'infoturismoWebApi', 
     'labels', 
     'icons', 
@@ -12,7 +12,7 @@ angular.module('infoturismoApp').controller('MainCtrl', [
     function (
         $scope, 
         $window, 
-        $sce, 
+        $sce,
         infoturismoWebApi, 
         labels, 
         icons, 

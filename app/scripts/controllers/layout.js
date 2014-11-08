@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('infoturismoApp').controller('LayoutCtrl', ['$scope', '$routeParams', 'labels', 'icons', function ($scope, $routeParams, labels, icons) {
+angular.module('infoturismoApp').controller('LayoutCtrl', ['$scope', '$routeParams', '$location', 'labels', 'icons', function ($scope, $routeParams, $location, labels, icons) {
 	$scope.isFiltersToggled = false;
 	$scope.activeItem = 1;
 
@@ -13,9 +13,6 @@ angular.module('infoturismoApp').controller('LayoutCtrl', ['$scope', '$routePara
 
     $scope.$on('$routeChangeSuccess', function () {
         var sectionId = $routeParams.sectionId;
-
-
-
 
 if(sectionId === "acceso")
              $scope.activeItem = 2;
@@ -34,4 +31,6 @@ if(sectionId === "acceso")
         else
              $scope.activeItem = 1;
     });
+
+    $scope.filterMenu = 'views/partials/filter-menu-acceso.html';
 }]);
