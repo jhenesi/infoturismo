@@ -88,42 +88,25 @@ angular.module('infoturismoApp').controller('FirstCtrl', [
 
 		config.getData()
       		.success(function(data, status, headers, config) {
-          		var categories, values, series, seriesArray;
+          		var categories, values, serie;
 
 	          	categories = [];
-	          	series = {};
 
 	          	angular.forEach(data, function(item, i) {
 	            	categories.push(item.Nombre);
 
-		        	series['global'] = series['global'] || {
-		          		name: "Global",
-		          		data: [],
-		          		stack: 'global'
-		          	};
+	            	serie = serie || {
+	            		name: 'Promedio',
+	            		data: [],
+	            		showInLegend: false
+	            	};
 
-					series['global'].data.push(item.Promedio);
-
-	            	angular.forEach(item.Datos, function(datos, i) {
-	            		series[datos.Nombre] = series[datos.Nombre] || {
-	            			name: datos.Nombre,
-	            			data: [],
-	            			stack: datos.Nombre
-	            		};
-	            		series[datos.Nombre].data.push(datos.Promedio);
-	            	});
-	          	});
-
-
-	          	seriesArray = [];
-
-	          	angular.forEach(Object.keys(series), function(item, i) {
-	          		seriesArray.push(series[item]);
+					serie.data.push(item.Promedio);
 	          	});
 
 	            $scope.datos = {
 	                categories: categories,
-	                series: seriesArray
+	                series: [serie]
 	            };
 	        })
         	.error(function(data, status, headers, config) {

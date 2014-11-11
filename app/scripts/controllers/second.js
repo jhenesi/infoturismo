@@ -18,6 +18,12 @@ angular.module('infoturismoApp').controller('SecondCtrl', [
 		infoturismoWebApi
 	) {
 		var getConfig = function(route) {
+			$scope.filters = filters;
+			
+			$scope.$watch('filters', function() {
+                console.log("filters changed");
+            });
+
 			var config = {};
 
 			config['/acceso/senalamiento'] = {
@@ -60,8 +66,6 @@ angular.module('infoturismoApp').controller('SecondCtrl', [
 		$scope.title = config.title;
       	$scope.titleIcon = config.icon;
       	$scope.navegacion = config.breadcrumb;
-
-      	console.log(config.breadcrumb)
 
    		config.getData()
 			.success(function(data, status, headers, config) {

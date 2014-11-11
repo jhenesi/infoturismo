@@ -33,5 +33,20 @@ angular.module('infoturismoApp').constant('icons', {
  		cerrarSesion: 'fa fa-fw fa-power-off',
  		filtros: 'fa fa-filter',
  		usuario: 'fa fa-user'
+	},
+	filterMenu: {
+		motivo: 'fa fa-fw fa-briefcase',
+		transporte: 'fa fa-fw fa-car',
+		genero: 'fa fa-fw fa-female',
+		edad: 'fa fa-fw fa-child',
+		compania: 'fa fa-fw fa-users',
+		ultima: 'fa fa-fw fa-calendar-o',
+		frecuencia: 'fa fa-fw fa-calendar',
+		ocupacion: 'fa fa-fw fa-pencil-square-o',
+		estancia: 'fa fa-fw fa-clock-o',
+		residencia: 'fa fa-fw fa-compass',
+		grado: 'fa fa-fw fa-graduation-cap',
+		oportunidad: 'fa fa-fw fa-reply',
+		gasto: 'fa fa-fw fa-money'
 	}
 });

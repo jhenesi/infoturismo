@@ -22,16 +22,7 @@ angular.module('infoturismoApp').directive('chartBar', function () {
                 if(!scope.isRendered) {
 					element.highcharts({
 		        		chart: {
-		                	type: 'bar',
-                            events: {
-                                redraw: function(){
-                                    /*labels.each(function(i, item){
-                                        if(i > categories.length - 1){
-                                            angular.element(item).attr("visibility","hidden");
-                                        }
-                                    });*/
-                                }
-                            }
+		                	type: 'bar'
 		            	},
 		            	exporting: { enabled: false },
 		            	title: {
@@ -49,8 +40,7 @@ angular.module('infoturismoApp').directive('chartBar', function () {
 		            	yAxis: {
 			                stackLabels: {
 			                    formatter: function() {
-                                    //var index = Object.keys(this.points)[0].split(',')[0];
-			                        return /*(index == categories.length) ? */this.axis.chart.xAxis[0].categories[this.x] /*: ''*/;
+			                        return this.axis.chart.xAxis[0].categories[this.x];
 			                    },
 			                    enabled: true,           
 			                    verticalAlign: 'top',     
@@ -85,17 +75,6 @@ angular.module('infoturismoApp').directive('chartBar', function () {
                                 }
                             }
                         },
-			            /*legend: {
-			                layout: 'vertical',
-			                align: 'right',
-			                verticalAlign: 'top',
-			                x: -40,
-			                y: 100,
-			                floating: true,
-			                borderWidth: 1,
-			                backgroundColor: '#FFFFFF',
-			                shadow: true
-			            },*/
 			            credits: {
 			                enabled: false
 			            },
@@ -118,12 +97,6 @@ angular.module('infoturismoApp').directive('chartBar', function () {
                 }
 
                 labels = element.find(".highcharts-stack-labels > text");
-
-                /*labels.each(function(i, item){
-                    if(i > categories.length - 1){
-                        angular.element(item).attr("visibility","hidden");
-                    }
-                });*/
 
             	tooltipLabel = element.find(".highcharts-tooltip > text");
 

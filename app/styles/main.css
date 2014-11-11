@@ -344,3 +344,26 @@ ul.alert-dropdown {
 .clickable {
     cursor: pointer;
 }
+
+.seleccion  ul{
+    padding:0;
+}
+
+.seleccion ul>li{
+    list-style:none;
+}
+
+.seleccion ul>li>a{
+    display: block;
+    padding: 10px 15px 10px 10px;
+    text-decoration: none;
+    color: #777;
+}
+
+.seleccion li>a:hover{
+    color:#333;
+}
+
+.seleccion li > a.active {
+    color:#080808;
+}

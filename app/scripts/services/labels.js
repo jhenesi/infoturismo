@@ -62,5 +62,20 @@ angular.module('infoturismoApp').service('labels',['$sce', function($sce) {
  		//Labels logo y cerrar sesión
 		marca: 'Infoturismo',
 		cerrarSesion: $sce.trustAsHtml('Cerrar Sesi&oacute;n'),
+
+		//Label filter menu
+		motivo: $sce.trustAsHtml('Motivo de Viaje'),
+		transporte: $sce.trustAsHtml('Medio Transporte'),
+		genero: $sce.trustAsHtml('Genero'),
+		edad: $sce.trustAsHtml('Edad'),
+		compania: $sce.trustAsHtml('Con qui&eacute;n viaja'),
+		ultima: $sce.trustAsHtml('&Uacute;ltima Visita'),
+		frecuencia: $sce.trustAsHtml('Frecuencia de Visita'),
+		ocupacion: $sce.trustAsHtml('Ocupaci&oacute;n'),
+		estancia: $sce.trustAsHtml('Duraci&oacute;n de la estancia'),
+		residencia: $sce.trustAsHtml('Lugar de residencia'),
+		grado: $sce.trustAsHtml('Grado Escolar'),
+		oportunidad: $sce.trustAsHtml('Oportunidad de regresar'),
+		gasto: $sce.trustAsHtml('Gasto')
  	};
 }]);
