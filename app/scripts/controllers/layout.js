@@ -147,7 +147,7 @@ angular.module('infoturismoApp').controller('LayoutCtrl', [
             label: labels.grado,
             id:"filter-grado"
         },{
-            activeClass: "{active: aactiveFilterItem == 12}",
+            activeClass: "{active: activeFilterItem == 12}",
             icon: filterMenuIcons.oportunidad,
             label: labels.oportunidad,
             id:"filter-oportunidad"
@@ -163,7 +163,7 @@ angular.module('infoturismoApp').controller('LayoutCtrl', [
         filterActive["filter-motivo"] = 1;
         filterActive["filter-transporte"] = 2;
         filterActive["filter-genero"] = 3;
-        filterActive["filter-edad: 4"] = 4;
+        filterActive["filter-edad"] = 4;
         filterActive["filter-compania"] = 5;
         filterActive["filter-ultima"] = 6;
         filterActive["filter-frecuencia"] = 7;
@@ -185,14 +185,9 @@ angular.module('infoturismoApp').controller('LayoutCtrl', [
                 filters.filterBy = "";
             }
             else {
-                console.log(filters)
                 $scope.activeFilterItem = filterActive[e.currentTarget.id];
                 filters.filterBy = e.currentTarget.id.split("filter-")[1];
             }
         };
-
-        $scope.$watch('filters', function() {
-                console.log("filters changed");
-            });
     }
 ]);

@@ -18,12 +18,9 @@ angular.module('infoturismoApp').controller('SecondCtrl', [
 		infoturismoWebApi
 	) {
 		var getConfig = function(route) {
+			$scope.template = 'views/partials/second-pie.html';
 			$scope.filters = filters;
 			
-			$scope.$watch('filters', function() {
-                console.log("filters changed");
-            });
-
 			var config = {};
 
 			config['/acceso/senalamiento'] = {
@@ -84,5 +81,45 @@ angular.module('infoturismoApp').controller('SecondCtrl', [
         	})
         	.error(function(data, status, headers, config) {
         	});
+
+        $scope.$watch('filters', function() {
+			if($scope.filters.filterBy !== "") {
+        		$scope.template = 'views/partials/second-column.html';
+
+        		config.getData($scope.filters.filterBy)
+        			.success(function(data, status, headers, config) {
+        				var categories, values, series, chartData;
+
+        				chartData = [];
+	          			categories = [];
+	          			series = {};
+
+	          			angular.forEach(data, function(item, i) {
+			            	categories.push(item.Nombre);
+			            	angular.forEach(item.Datos, function(element, j){
+			            		series[element.Clave] = series[element.Clave] || {
+			            			name: element.Nombre,
+			            			data: [],
+			            			stack: 'Calificacion'
+			            		};
+			            		series[element.Clave].data.push(element.Total);
+			            	});
+			          	});
+
+			          	angular.forEach(Object.keys(series), function(keys, i) {
+			          		chartData.push(series[keys]);
+			          	});
+
+			          	$scope.groupedData = {
+			          		categories: categories,
+	                		series: chartData
+			          	};
+			          	$scope.groupedTitle = "Agrupado por Motivo de Viaje";
+        			});
+        	}
+         	else {
+          		$scope.template = 'views/partials/second-pie.html';
+      		}
+       	}, true);
 	}
 ]);

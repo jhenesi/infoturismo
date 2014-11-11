@@ -34,8 +34,18 @@ angular.module('infoturismoApp').service('infoturismoWebApi', ['$http', function
 		getHospedajePercepcionOverviewData: function() {
 			return $http.get(root +'/data/hospedaje-percepcion.json');
 		},
-		getSenalamientoOverviewData: function() {
-			return $http.get(root +'/data/senalamiento.json');
+		getSenalamientoOverviewData: function(filter) {
+			var routes = {};
+
+			routes['default'] = $http.get(root +'/data/senalamiento.json');
+			routes['motivo'] = $http.get(root +'/data/senalamiento-motivo.json');
+
+			if(filter == "" || filter == null){
+				return routes['default'];
+			}
+			else {
+				return routes[filter];
+			}
 		}
 	};
 }]);
