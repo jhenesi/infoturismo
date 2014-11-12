@@ -52,7 +52,7 @@ angular.module('infoturismoApp').directive('chartRadar', function () {
                             lineWidth: 0,
                             labels: {
                                 step: 1,
-                                distance: 25
+                                distance: 23
                             }
                         },
 

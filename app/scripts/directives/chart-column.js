@@ -26,7 +26,10 @@ angular.module('infoturismoApp').directive('chartColumn', function () {
 				        },
 				        exporting: { enabled: false },
 				        title: {
-				            text: title
+				            text: title,
+				            style: {
+				            	fontSize: '15px'
+				            }
 				        },
 				        xAxis: {
 				            categories: categories
@@ -37,6 +40,13 @@ angular.module('infoturismoApp').directive('chartColumn', function () {
 				            title: {
 				                text: 'Calificacion'
 				            }
+				        },
+				        legend: {
+				        	symbolWidth: 8,
+				        	layout: 'vertical',
+					     	align: 'right',
+					      	verticalAlign: 'top',
+					      	y: 50
 				        },
 				        tooltip: {
 				            formatter: function () {
@@ -50,7 +60,10 @@ angular.module('infoturismoApp').directive('chartColumn', function () {
 				                stacking: 'normal'
 				            }
 				        },
-				        series: series
+				        series: series,
+				        credits: {
+                            enabled: false
+                        }
     				});
 
                 }

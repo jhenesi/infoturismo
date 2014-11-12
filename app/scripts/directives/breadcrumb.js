@@ -17,20 +17,21 @@ angular.module('infoturismoApp').directive('breadcrumb', function () {
   				li = $("<li></li>");
   				i = $('<i></i>');
   				
-  				i.addClass('fa ' + location.icon);
-  				li.append(i);
+  				//i.addClass('fa ' + location.icon);
+  				//li.append(i);
 
   				if(location.next) {
-  					a = $('<a>' + location.name + '</a>');
+  					a = $('<a><i class="fa ' + location.icon + '"></i><span class="hidden-xs hidden-sm"> ' + location.name + '</span></a>');
 
   					a.attr('href', location.href);
-            li.append("&nbsp;");
+
+            //li.append("&nbsp;");
   					li.append(a);
   				}
           else
           {
             li.addClass("active");
-            li.append("&nbsp;" + location.name);
+            li.append('<i class="fa ' + location.icon + '"></i><span class="hidden-xs hidden-sm"> ' + location.name + '</span>');
           }
 
   				return li;

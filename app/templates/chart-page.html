@@ -2,7 +2,10 @@
 	<!-- Page Heading -->
 	<div class="row">
 	    <div class="col-lg-12">
-	        <h1 class="page-header">
+	    	<h5 class="page-header hidden-md hidden-lg">
+	            <i class='fa {{titleIcon}}'></i> <span ng-bind-html="title"></span>
+	        </h5>
+	        <h1 class="page-header hidden-xs hidden-sm">
 	            <i class='fa {{titleIcon}}'></i> <span ng-bind-html="title"></span>
 	        </h1>
 	        <breadcrumb navigation="navegacion"></breadcrumb>

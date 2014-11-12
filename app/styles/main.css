@@ -73,7 +73,7 @@ body {
     right: 15px;
     left: 15px;
     bottom: 20px;
-    top: 275px;
+    top: 250px;
 }
 
 .chart-row > div, 
@@ -366,4 +366,8 @@ ul.alert-dropdown {
 
 .seleccion li > a.active {
     color:#080808;
+}
+
+.panel-row {
+    background: white;
 }

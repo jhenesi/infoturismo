@@ -19,24 +19,42 @@ angular.module('infoturismoApp').controller('MainCtrl', [
         routes, 
         crumbs
     ) {
-        var breadcrumbs = crumbs.getGeneral(),
-            rutas = {};
+        var stringContains = function(string, substring) {
+            var regexp = new RegExp('\\b' + substring + '\\b');
+            return regexp.test(string);
+        };
+
+        var breadcrumbs = crumbs.getGeneral();
 
         $scope.title = labels.general;
         $scope.titleIcon = icons.general;
 
         $scope.navegacion = breadcrumbs;
 
-        rutas['Acceso al Destino e Infraestructura'] = routes.acceso.path;
-        rutas['Atractivos y Oferta Turística'] = routes.atractivos.path;
-        rutas['Consumo de Servicios'] = routes.consumo.path;
-        rutas['Costo'] = routes.costo.path;
-        rutas['Experiencia de Viaje'] = routes.experiencia.path;
-        rutas['Imagen'] = routes.imagen.path;
-        rutas['Satisfacción y Recomendación'] = routes.satisfaccion.path;
-
         $scope.onLabelClick = function(e){
-            $window.location = rutas[angular.element(e.target).text()]
+            var text = angular.element(e.currentTarget).text();
+
+            if(stringContains(text, 'Acceso al Destino e Infraestructura')){
+                $window.location = routes.acceso.path;
+            }
+            else if (stringContains(text, 'Atractivos y Oferta Turística')){
+                $window.location = routes.atractivos.path;
+            }
+            else if (stringContains(text, 'Consumo de Servicios')){
+                $window.location = routes.consumo.path;
+            }
+            else if (stringContains(text, 'Costo')){
+                $window.location = routes.costo.path;
+            }
+            else if (stringContains(text, 'Experiencia de Viaje')){
+                $window.location = routes.experiencia.path;
+            }
+             else if (stringContains(text, 'Imagen')){
+                $window.location = routes.imagen.path;
+            }
+            else if (stringContains(text, 'Satisfacción y Recomendación')){
+                $window.location = routes.satisfaccion.path;
+            }
         };
 
         infoturismoWebApi.getOverviewData()

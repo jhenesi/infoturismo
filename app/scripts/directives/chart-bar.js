@@ -45,7 +45,7 @@ angular.module('infoturismoApp').directive('chartBar', function () {
 			                    enabled: true,           
 			                    verticalAlign: 'top',     
 			                    align: 'left',
-			                    y: -5
+			                    y: -1
 			                },
 		                	min: 0,
 		                	max: 10,
@@ -61,7 +61,12 @@ angular.module('infoturismoApp').directive('chartBar', function () {
 			            tooltip: {
 			                formatter: function () {
 		                 		return this.x + '</b>: <b>' + this.y + '</b>';
-		                  	}
+		                  	},
+                            style: {
+                                height:'auto',
+                                width:'150px',   
+                                overflow:'auto'
+                            }
 			            },
 			            plotOptions: {
                             series: {
