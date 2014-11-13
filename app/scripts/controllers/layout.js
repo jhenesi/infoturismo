@@ -189,5 +189,9 @@ angular.module('infoturismoApp').controller('LayoutCtrl', [
                 filters.filterBy = e.currentTarget.id.split("filter-")[1];
             }
         };
+
+        $scope.$watch('filters.filterBy', function() {
+            $scope.toggleFilters();
+        });
     }
 ]);

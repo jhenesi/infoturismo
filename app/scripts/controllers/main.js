@@ -8,7 +8,8 @@ angular.module('infoturismoApp').controller('MainCtrl', [
     'labels', 
     'icons', 
     'routes', 
-    'crumbs', 
+    'crumbs',
+    'filters',
     function (
         $scope, 
         $window, 
