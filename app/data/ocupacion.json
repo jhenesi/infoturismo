@@ -1,0 +1,226 @@
+[{
+	"Clave":"Estudiante",
+	"Nombre":"Estudiante",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"EmpleadoIP",
+	"Nombre":"EmpleadoIP",
+	"Total":20,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":5
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":7
+	}]
+},{
+	"Clave":"EmpleadoG",
+	"Nombre":"Empleado de Gobierno",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":6
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":3
+	}]
+},{
+	"Clave":"Profesionista/Tecnico",
+	"Nombre":"Profesionista/Tecnico",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":3
+	}]
+},{
+	"Clave":"AmaCasa",
+	"Nombre":"Ama de casa",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":5
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Dir/Ejec",
+	"Nombre":"Directivo/Ejecutivo",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":4
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"Dueño",
+	"Nombre":"Dueño de Negocio",
+	"Total":8,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Retirado",
+	"Nombre":"Retirado",
+	"Total":13,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":4
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Otro",
+	"Nombre":"Otro",
+	"Total":23,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":4
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":10
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+}]

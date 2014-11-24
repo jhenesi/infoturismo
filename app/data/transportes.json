@@ -1,0 +1,13 @@
+[{
+	"Clave":"Calidad",
+	"Nombre":"Calidad el trasporte local",
+	"Promedio":8
+},{
+	"Clave":"Atencion",
+	"Nombre":"Atencion del personal del servicio",
+	"Promedio":8
+},{
+	"Clave":"Disponibilidad",
+	"Nombre":"Disponibilidad del trasporte",
+	"Promedio":9
+}]

@@ -1,0 +1,126 @@
+[{
+	"Clave":"Edad18+",
+	"Nombre":"18 a 29",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":3
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":5
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"Edad30+",
+	"Nombre":"30 a 44",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":3
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"Edad45+",
+	"Nombre":"45 a 59",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":5
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":4
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Edad60+",
+	"Nombre":"60 a 74",
+	"Total":23,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":4
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":10
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"Edad75+",
+	"Nombre":"75 a 120",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":5
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+}]

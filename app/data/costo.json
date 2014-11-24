@@ -1,21 +1,21 @@
 [{
 	"Clave":"Hospedaje",
-	"Nombre":"Costo por servicio de hospedaje.",
+	"Nombre":"Hospedaje",
 	"Promedio":7
 },{
 	"Clave":"Transporte",
-	"Nombre":"Costo por servicio de transportacion.",
+	"Nombre":"Transportacion",
 	"Promedio":3
 },{
 	"Clave":"Alimentos",
-	"Nombre":"Costo por servicio de alimentos y bebidas.",
+	"Nombre":"Alimentos y bebidas",
 	"Promedio":8
 },{
 	"Clave":"Excursion",
-	"Nombre":"Costo por servicio de excursion/turistico.",
+	"Nombre":"Excursion/turistico",
 	"Promedio":6
 },{
 	"Clave":"Estacionamiento",
-	"Nombre":"Costo por servicio de Estacionamiento.",
+	"Nombre":"Estacionamiento",
 	"Promedio":5
 }]

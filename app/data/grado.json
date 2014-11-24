@@ -1,0 +1,251 @@
+[{
+	"Clave":"Pre-escolar",
+	"Nombre":"Pre-escolar",
+	"Total":20,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":7
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":6
+	}]
+},{
+	"Clave":"Primaria",
+	"Nombre":"Pareja",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":3
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":7
+	}]
+},{
+	"Clave":"Secundaria",
+	"Nombre":"Familia",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":5
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":4
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"CarreraTec",
+	"Nombre":"Carrera Tecnica",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":4
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":7
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":7
+	}]
+},{
+	"Clave":"Preparatoria",
+	"Nombre":"Preparatoria",
+	"Total":12,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":5
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":4
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Normal",
+	"Nombre":"Normal",
+	"Total":5,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Profesional",
+	"Nombre":"Profesional",
+	"Total":5,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Especialidad",
+	"Nombre":"Especialidad",
+	"Total":5,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"M/D",
+	"Nombre":"Maestria o Doctorado",
+	"Total":5,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]		
+},{
+	"Clave":"PostD",
+	"Nombre":"Postdoctorado",
+	"Total":5,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+}]

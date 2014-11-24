@@ -1,0 +1,127 @@
+[{
+	"Clave":"UV1mes",
+	"Nombre":"Ultima visita de 1 a 5 meses ",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"UV6mes",
+	"Nombre":"Ultima visita de 6 a 11 meses",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":4
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":5
+	}]
+},{
+	"Clave":"UV12mes",
+	"Nombre":"Ultima visita de 12 a 17 meses",
+	"Total":22,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":5
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":8
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":4
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":3
+	}]
+},{
+	"Clave":"UV18mes",
+	"Nombre":"Ultima visita de 18 a 23 mesess",
+	"Total":20,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":5
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":3
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":3
+	}]
+},{
+	"Clave":"UV24mes",
+	"Nombre":"Ultima visita hace 24 meses o mas",
+	"Total":12,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":5
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":3
+	}]
+
+}]

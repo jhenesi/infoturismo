@@ -1,0 +1,126 @@
+[{
+	"Clave":"1+",
+	"Nombre":"1 a 4 veces",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":4
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":5
+	}]
+},{
+	"Clave":"5+",
+	"Nombre":"5 a 9 veces",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":3
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"10+",
+	"Nombre":"10 a 14 veces",
+	"Total":8,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":3
+	}]
+},{
+	"Clave":"15+",
+	"Nombre":"15 a 19 veces",
+	"Total":12,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":4
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"20+",
+	"Nombre":"20 veces o mas",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":5
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+}]

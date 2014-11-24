@@ -1,0 +1,151 @@
+[{
+	"Clave":"Gasto-Hospedaje",
+	"Nombre":"Gasto diario por Hospedaje",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"Gasto-Restaurantes",
+	"Nombre":"Gasto diario por Restaurantes",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":3
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"Gasto-Transportes",
+	"Nombre":"Gasto diario por Transportes",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":5
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":4
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Gasto-Atractivos",
+	"Nombre":"Gasto diario por Atractivos",
+	"Total":25,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":5
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":7
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":3
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":3
+	}]
+},{
+	"Clave":"Gasto-Tiendas",
+	"Nombre":"Gasto diario por Tiendas",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":5
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"Gasto-Medicos",
+	"Nombre":"Gasto diario por Medicos",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":1
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":5
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+}]

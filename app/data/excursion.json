@@ -1,0 +1,13 @@
+[{
+	"Clave":"Servicios",
+	"Nombre":"Servicios de excursion/turisticos",
+	"Promedio":8
+},{
+	"Clave":"Calidad",
+	"Nombre":"Calidad de los servicios de excursion/turisticos",
+	"Promedio":8
+},{
+	"Clave":"Atencion",
+	"Nombre":"Atencion del personal",
+	"Promedio":9
+}]

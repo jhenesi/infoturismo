@@ -60,6 +60,30 @@ angular.module('infoturismoApp').controller('SectionsCtrl', [
  			config['/consumo'].breadcrumb = crumbs.getGeneral();
 		    config['/consumo'].breadcrumb.addCrumb(crumbs.getConsumo());
 
+		    config['/experiencia'] = {
+				title: labels.experiencia,
+				icon: icons.experiencia,
+				data: [{
+					clave: 'ExperienciaViaje',
+					type: 'panel-primary',
+					icon: icons.experiencia,
+					go: routes.experiencia.experienciaViaje.path,
+					score: '',
+					category: '',
+				},{
+					clave: 'Factores',
+					type: 'panel-green',
+					icon: icons.experiencia,
+					go: routes.experiencia.factores.path,
+					score: '',
+					category: '',
+				}],
+				getData: infoturismoWebApi.getExperienciaOverviewData
+			};
+
+ 			config['/experiencia'].breadcrumb = crumbs.getGeneral();
+		    config['/experiencia'].breadcrumb.addCrumb(crumbs.getExperiencia());
+
 			return config[route];
 		};
 

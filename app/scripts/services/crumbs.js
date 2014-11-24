@@ -36,7 +36,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
             return {
                 name: labels.opciones,
                 href: routes.acceso.opciones.path,
-                icon: '',
+                icon: icons.pieChart,
                 addCrumb: addCrumb
             };
         },
@@ -44,7 +44,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
             return {
                 name: labels.calidad,
                 href: routes.acceso.calidad.path,
-                icon: '',
+                icon: icons.pieChart,
                 addCrumb: addCrumb
             };
         },
@@ -52,7 +52,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
             return {
                 name: labels.mantenimiento,
                 href: routes.acceso.mantenimiento.path,
-                icon: '',
+                icon: icons.pieChart,
                 addCrumb: addCrumb
             };
         },
@@ -60,7 +60,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
             return {
                 name: labels.atencion,
                 href: routes.acceso.atencion.path,
-                icon: '',
+                icon: icons.pieChart,
                 addCrumb: addCrumb
             };
         },
@@ -77,48 +77,48 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     	getAtractivosServicios: function() {
 			return {
 	    		name: labels.atractivosServicios,
-	    		href: routes.atractivos.reactivos.atractivosServicios.path,
-	    		icon: '',
+	    		href: routes.atractivos.atractivosServicios.path,
+	    		icon: icons.pieChart,
 	    		addCrumb: addCrumb
     		};
     	},
     	getAtractivosConcervacion: function() {
 			return {
 	    		name: labels.atractivosConservacion,
-	    		href: routes.atractivos.reactivos.atractivosConservacion.path,
-	    		icon: '',
+	    		href: routes.atractivos.atractivosConservacion.path,
+	    		icon: icons.pieChart,
 	    		addCrumb: addCrumb
     		};
     	},
     	getAtractivosVariedad: function() {
 			return {
 	    		name: labels.atractivosVariedad,
-	    		href: routes.atractivos.reactivos.atractivosVariedad.path,
-	    		icon: '',
+	    		href: routes.atractivos.atractivosVariedad.path,
+	    		icon: icons.pieChart,
 	    		addCrumb: addCrumb
     		};
     	},
     	getAtractivosCalidad: function() {
 			return {
 	    		name: labels.atractivosCalidad,
-	    		href: routes.atractivos.reactivos.atractivosCalidad.path,
-	    		icon: '',
+	    		href: routes.atractivos.atractivosCalidad.path,
+	    		icon: icons.pieChart,
 	    		addCrumb: addCrumb
     		};
     	},
     	getAtractivosCulturales: function() {
 			return {
 	    		name: labels.atractivosCulturales,
-	    		href: routes.atractivos.reactivos.atractivosCulturales.path,
-	    		icon: '',
+	    		href: routes.atractivos.atractivosCulturales.path,
+	    		icon: icons.pieChart,
 	    		addCrumb: addCrumb
     		};
     	},
     	getAtractivosNaturales: function() {
 			return {
 	    		name: labels.atractivosNaturales,
-	    		href: routes.atractivos.reactivos.atractivosNaturales.path,
-	    		icon: '',
+	    		href: routes.atractivos.atractivosNaturales.path,
+	    		icon: icons.pieChart,
 	    		addCrumb: addCrumb
     		};
     	},
@@ -150,6 +150,143 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
                 addCrumb: addCrumb
             };
         },
+        getHospedajeLimpieza: function() {
+            return {
+                name: labels.hospedajeLimpieza,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+
+getHospedajeAtencion: function() {
+            return {
+                name: labels.hospedajeAtencion,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+getHospedajeEleccion: function() {
+            return {
+                name: labels.hospedajeAtencion,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        
+
+
+
+
+         getAlimentacion: function() {
+            return {
+                name: labels.alimentacion,
+                href: routes.consumo.alimentacion.path,
+                icon: icons.alimentacion,
+                addCrumb: addCrumb
+            };
+        },
+
+        getAlimentacionExperiencia: function() {
+            return {
+                name: labels.alimentacionExperiencia,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getAlimentacionCalidad: function() {
+            return {
+                name: labels.alimentacionCalidad,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getAlimentacionLimpieza: function() {
+            return {
+                name: labels.alimentacionLimpieza,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+
+
+
+
+
+         getExcursion: function() {
+            return {
+                name: labels.excursion,
+                href: routes.consumo.servicioExcursion.path,
+                icon: icons.servicioExcursion,
+                addCrumb: addCrumb
+            };
+        },
+
+
+        getExcursionServicio: function() {
+            return {
+                name: labels.serviciosExcursion,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getExcursionCalidad: function() {
+            return {
+                name: labels.serviciosCalidad,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getExcursionAtencion: function() {
+            return {
+                name: labels.serviciosAtencion,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        
+
+         getTransporte: function() {
+            return {
+                name: labels.transporteEstacionamiento,
+                href: routes.consumo.transporteEstacionamiento.path,
+                icon: icons.transporteEstacionamiento,
+                addCrumb: addCrumb
+            };
+        },
+        getTransporteCalidad: function() {
+            return {
+                name: labels.transporteLocal,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getTransporteAtencion: function() {
+            return {
+                name: labels.transporteAtencion,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getTransporteDisponibilidad: function() {
+            return {
+                name: labels.transporteDisponibilidad,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+
 
         /*
     	getConsumoHotel: function() {
@@ -239,43 +376,45 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     	getCostoHospedaje: function() {
     		return {
     			name: labels.costoHospedaje,
-    			href: routes.costo.reactivos.hospedaje.path,
-    			icon: '',
+    			href: routes.costo.hospedaje.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
     	getCostoTransporte: function() {
     		return {
     			name: labels.costoTransporte,
-    			href: routes.costo.reactivos.transporte.path,
-    			icon: '',
+    			href: routes.costo.transporte.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
     	getCostoAlimentos: function() {
     		return {
     			name: labels.costoAlimentos,
-    			href: routes.costo.reactivos.alimentos.path,
-    			icon: '',
+    			href: routes.costo.alimentos.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
     	getCostoExcursion: function() {
     		return {
     			name: labels.costoTransporte,
-    			href: routes.costo.reactivos.excursion.path,
-    			icon: '',
+    			href: routes.costo.excursion.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
     	getCostoEstacionamiento: function() {
     		return {
     			name: labels.costoEstacionamiento,
-    			href: routes.costo.reactivos.estacionamiento.path,
-    			icon: '',
+    			href: routes.costo.estacionamiento.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
+
+        //Experiencia
     	getExperiencia: function() {
     		return {
     			name: labels.experiencia,
@@ -284,10 +423,147 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     			addCrumb: addCrumb
     		};
     	},
+        getExperienciaViaje: function() {
+            return {
+                name: labels.experienciaViaje,
+                href: routes.experiencia.experienciaViaje.path,
+                icon: icons.experiencia,
+                addCrumb: addCrumb
+            };
+        },
+        getExperienciaViajeObregon: function() {
+            return {
+                name: labels.experienciaViajeObregon,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getExperienciaViajeHospitalidad: function() {
+            return {
+                name: labels.experienciaViajehospitalidad,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getExperienciaViajeNaturales: function() {
+            return {
+                name: labels.experienciaViajeNaturales,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getExperienciaViajeDiferente: function() {
+            return {
+                name: labels.experienciaViajeDiferente,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getExperienciaViajeDisponibilidad: function() {
+            return {
+                name: labels.experienciaViajeDisponibilidad,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactores: function() {
+            return {
+                name: labels.factores,
+                href: routes.experiencia.factores.path,
+                icon: icons.experiencia,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresRecomendaciones: function() {
+            return {
+                name: labels.factoresRecomendaciones,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresConocimiento: function() {
+            return {
+                name: labels.factoresConocimiento,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresCercania: function() {
+            return {
+                name: labels.factoresCercania,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresPrecios: function() {
+            return {
+                name: labels.factoresPrecios,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresDisponibilidad: function() {
+            return {
+                name: labels.factoresDisponibilidad,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresDiversidad: function() {
+            return {
+                name: labels.factoresDiversidad,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresInteres: function() {
+            return {
+                name: labels.factoresInteres,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresSalud: function() {
+            return {
+                name: labels.factoresSalud,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresTrabajo: function() {
+            return {
+                name: labels.factoresTrabajo,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        getFactoresOtro: function() {
+            return {
+                name: labels.factoresOtro,
+                href: '',
+                icon: icons.pieChart,
+                addCrumb: addCrumb
+            };
+        },
+        /*
     	getExperienciaObregon: function() {
     		return {
     			name: labels.experienciaObregon,
-    			href: routes.experiencia.reactivos.obregon.path,
+    			href: routes.experiencia.obregon.path,
     			icon: '',
     			addCrumb: addCrumb
     		};
@@ -295,7 +571,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     	getExperienciaHospitalidad: function() {
     		return {
     			name: labels.experienciaHospitalidad,
-    			href: routes.experiencia.reactivos.hospitalidad.path,
+    			href: routes.experiencia.hospitalidad.path,
     			icon: '',
     			addCrumb: addCrumb
     		};
@@ -303,7 +579,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     	getExperienciaNaturales: function() {
     		return {
     			name: labels.experienciaNaturales,
-    			href: routes.experiencia.reactivos.naturales.path,
+    			href: routes.experiencia.naturales.path,
     			icon: '',
     			addCrumb: addCrumb
     		};
@@ -311,7 +587,7 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     	getExperienciaDiferente: function() {
     		return {
     			name: labels.experienciaDiferente,
-    			href: routes.experiencia.reactivos.diferente.path,
+    			href: routes.experiencia.diferente.path,
     			icon: '',
     			addCrumb: addCrumb
     		};
@@ -319,11 +595,11 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     	getExperienciaDisponibilidad: function() {
     		return {
     			name: labels.experienciaDisponibilidad,
-    			href: routes.experiencia.reactivos.disponibilidad.path,
+    			href: routes.experiencia.disponibilidad.path,
     			icon: '',
     			addCrumb: addCrumb
     		};
-    	},
+    	},*/
 
 		//Imagen
     	getImagen: function() {
@@ -337,40 +613,40 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
     	getImagenPercepcion: function() {
     		return {
     			name: labels.seguridad,
-    			href: routes.imagen.reactivos.percepciones.path,
-    			icon: '',
+    			href: routes.imagen.percepciones.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
     	getImagenSitios: function() {
     		return {
     			name: labels.imagenSitio,
-    			href: routes.imagen.reactivos.imagenes.path,
-    			icon: '',
+    			href: routes.imagen.imagenes.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
     	getImagenAmbulantes: function() {
     		return {
     			name: labels.vendedores,
-    			href: routes.imagen.reactivos.ambulantes.path,
-    			icon: '',
+    			href: routes.imagen.ambulantes.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
     	getImagenTrasito: function() {
     		return {
     			name: labels.transito,
-    			href: routes.imagen.reactivos.transito.path,
-    			icon: '',
+    			href: routes.imagen.transito.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
     	getImagenLimpieza: function() {
     		return {
     			name: labels.limpieza,
-    			href: routes.imagen.reactivos.limpieza.path,
-    			icon: '',
+    			href: routes.imagen.limpieza.path,
+    			icon: icons.pieChart,
     			addCrumb: addCrumb
     		};
     	},
@@ -388,32 +664,32 @@ angular.module('infoturismoApp').service('crumbs', ['labels', 'icons', 'routes',
         getSatisfaccionNivel: function() {
             return {
                 name: labels.nivelSatisfaccion,
-                href: routes.satisfaccion.reactivos.nivelSatisfaccion.path,
-                icon: '',
+                href: routes.satisfaccion.nivelSatisfaccion.path,
+                icon: icons.pieChart,
                 addCrumb: addCrumb
             };
         },
         getSatisfaccionExpectativas: function() {
             return {
                 name: labels.expectativas,
-                href: routes.satisfaccion.reactivos.expectativas.path,
-                icon: '',
+                href: routes.satisfaccion.expectativas.path,
+                icon: icons.pieChart,
                 addCrumb: addCrumb
             };
         },
         getSatisfaccionDisposicion: function() {
             return {
                 name: labels.disposicion,
-                href: routes.satisfaccion.reactivos.disposicion.path,
-                icon: '',
+                href: routes.satisfaccion.disposicion.path,
+                icon: icons.pieChart,
                 addCrumb: addCrumb
             };
         },
         getSatisfaccionRecomendacion: function() {
             return {
                 name: labels.recomendacion,
-                href: routes.satisfaccion.reactivos.recomendacion.path,
-                icon: '',
+                href: routes.satisfaccion.recomendacion.path,
+                icon: icons.pieChart,
                 addCrumb: addCrumb
             };
         }

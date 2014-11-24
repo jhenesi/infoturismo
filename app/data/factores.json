@@ -1,0 +1,41 @@
+[{
+	"Clave":"Recomendaciones",
+	"Nombre":"Recomendaciones",
+	"Promedio":3
+},{
+	"Clave":"Conocimiento",
+	"Nombre":"Conocimiento previo",
+	"Promedio":5
+},{
+	"Clave":"Cercania",
+	"Nombre":"Cercania del lugar de origen",
+	"Promedio":8
+},{
+	"Clave":"Precios",
+	"Nombre":"Precios",
+	"Promedio":5
+},{
+	"Clave":"Disponibilidad",
+	"Nombre":"Disponibilidad de tiempo",
+	"Promedio":7
+},{
+	"Clave":"Diversidad",
+	"Nombre":"Diversidad de actividades",
+	"Promedio":1
+},{
+	"Clave":"Interes",
+	"Nombre":"Interes de conocer nuevos lugares",
+	"Promedio":2
+},{
+	"Clave":"Salud",
+	"Nombre":"Salud",
+	"Promedio":10
+},{
+	"Clave":"Trabajo",
+	"Nombre":"Trabajo",
+	"Promedio":2
+},{
+	"Clave":"Otro",
+	"Nombre":"Otro",
+	"Promedio":1
+}]

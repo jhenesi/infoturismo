@@ -28,7 +28,7 @@ angular.module('infoturismoApp').constant('routes', {
 		//rutas Atractivos y oferta turistica
 		atractivos: {
 			path: '#/atractivos',
-		  	reactivos: {
+		  	
 		  		atractivosServicios: {
 		          path: '#/atractivos/atractivosServicios'
 		        },
@@ -47,13 +47,13 @@ angular.module('infoturismoApp').constant('routes', {
 		        atractivosNaturales: {
 		          path: '#/atractivos/atractivosNaturales'
 		        }
-			}
+			
 		},
 
 		//rutas Costos
 		costo: {
 			path: '#/costo',
-			reactivos: {
+			
 				hospedaje: {
 					path: '#/costo/hospedaje'
 				},
@@ -69,7 +69,7 @@ angular.module('infoturismoApp').constant('routes', {
 				estacionamiento: {
 					path: '#/costo/estacionamiento'
 				}
-			}
+			
 		},
 
 		//rutas Consumo de servicios
@@ -91,41 +91,103 @@ angular.module('infoturismoApp').constant('routes', {
   				}
 	  		},
 	  		alimentacion: {
-	  			path: '#/consumo/alimentacion'
+	  			path: '#/consumo/alimentacion',
+	  			experiencia: {
+  					path: '#/consumo/alimentacion/experiencia'
+  				},
+  				calidad: {
+					path: '#/consumo/alimentacion/calidad'
+  				},
+  				limpieza: {
+					path: '#/consumo/alimentacion/limpieza'
+  				}
 	  		},
 	  		servicioExcursion: {
-	  			path: '#/consumo/servicioexcursion'
+	  			path: '#/consumo/servicioExcursion',
+	  			servicios: {
+  					path: '#/consumo/servicioExcursion/servicios'
+  				},
+  				calidad: {
+					path: '#/consumo/servicioExcursion/calidad'
+  				},
+  				atencion: {
+					path: '#/consumo/servicioExcursion/atencion'
+  				}
 	  		},
 	  		transporteEstacionamiento: {
-	  			path: '#/consumo/transporteestacionamiento'
+	  			path: '#/consumo/transporteEstacionamiento',
+	  			calidad: {
+  					path: '#/consumo/transporteEstacionamiento/calidad'
+  				},
+  				atencion: {
+					path: '#/consumo/transporteEstacionamiento/atencion'
+  				},
+  				disponibilidad: {
+					path: '#/consumo/transporteEstacionamiento/disponibilidad'
+  				}
 	  		}
 		},
 
 
+
 		experiencia: {
 			path: '#/experiencia',
-			reactivos: {
+			experienciaViaje: {
+				path: '#/experiencia/experienciaViaje',
 				obregon: {
-					path: '#/experiencia/obregon'
+					path: '#/experiencia/experienciaViaje/obregon'
 				},
 				hospitalidad: {
-					path: '#/experiencia/hospitalidad'
+					path: '#/experiencia/experienciaViaje/hospitalidad'
 				},
 				naturales: {
-					path: '#/experiencia/naturales'
+					path: '#/experiencia/experienciaViaje/naturales'
 				},
 				diferente: {
-					path: '#/experiencia/diferente'
+					path: '#/experiencia/experienciaViaje/diferente'
 				},
 				disponibilidad: {
-					path: '#/experiencia/disponibilidad'
+					path: '#/experiencia/experienciaViaje/disponibilidad'
+				}
+			},
+			factores: {
+				path: '#/experiencia/factores',
+				recomendaciones: {
+					path: '#/experiencia/factores/recomendaciones'
+				},
+				conocimiento: {
+					path: '#/experiencia/factores/conocimiento'
+				},
+				cercania: {
+					path: '#/experiencia/factores/cercania'
+				},
+				precios: {
+					path: '#/experiencia/factores/precios'
+				},
+				disponibilidad: {
+					path: '#/experiencia/factores/disponibilidad'
+				},
+				diversidad: {
+					path: '#/experiencia/factores/diversidad'
+				},
+				interes: {
+					path: '#/experiencia/factores/interes'
+				},
+				salud: {
+					path: '#/experiencia/factores/salud'
+				},
+				trabajo: {
+					path: '#/experiencia/factores/trabajo'
+				},
+				otro: {
+					path: '#/experiencia/factores/otro'
 				}
 			}
 		},
 
 		imagen: {
 			path: '#/imagen',
-     		reactivos: {
+     		
      			percepciones:{
      				path: '#/imagen/percepcion'
      			},
@@ -141,13 +203,13 @@ angular.module('infoturismoApp').constant('routes', {
      			limpieza:{
      				path: '#/imagen/limpieza'
      			}
-     		}
+     		
 		},
 
 
 		satisfaccion: {
 			path: '#/satisfaccion',
-     		reactivos: {
+     		
      			nivelSatisfaccion:{
      				path: '#/satisfaccion/nivel'
      			},
@@ -160,7 +222,7 @@ angular.module('infoturismoApp').constant('routes', {
      			recomendacion:{
      				path: '#/satisfaccion/recomendacion'
      			}
-     		}
+     		
 		}
 	
 

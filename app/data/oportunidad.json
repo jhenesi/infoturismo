@@ -1,0 +1,99 @@
+[{
+	"Clave":"RegresarS",
+
+	"Nombre":"Oportunidad de Regresar Si",
+
+	"Total":10,
+
+	"Datos":[{
+
+		"Clave":"MB",
+
+		"Nombre":"Muy Baja",
+
+		"Total":1
+
+	},{
+
+		"Clave":"B",
+
+		"Nombre":"Baja",
+
+		"Total":2
+
+	},{
+
+		"Clave":"M",
+
+		"Nombre":"Media",
+
+		"Total":1
+
+	},{
+
+		"Clave":"A",
+
+		"Nombre":"Alta",
+
+		"Total":2
+
+	},{
+
+		"Clave":"MA",
+
+		"Nombre":"Muy Alta",
+
+		"Total":4
+
+	}]
+
+},{
+	"Clave":"RegresarN",
+
+	"Nombre":"Oportunidad de Regresar No",
+
+	"Total":15,
+
+	"Datos":[{
+
+		"Clave":"MB",
+
+		"Nombre":"Muy Baja",
+
+		"Total":1
+
+	},{
+
+		"Clave":"B",
+
+		"Nombre":"Baja",
+
+		"Total":2
+
+	},{
+
+		"Clave":"M",
+
+		"Nombre":"Media",
+
+		"Total":3
+
+	},{
+
+		"Clave":"A",
+
+		"Nombre":"Alta",
+
+		"Total":4
+
+	},{
+
+		"Clave":"MA",
+
+		"Nombre":"Muy Alta",
+
+		"Total":5
+
+	}]
+
+}]

@@ -1,0 +1,126 @@
+[{
+	"Clave":"1h+",
+	"Nombre":"1 a 9 horas",
+	"Total":,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":3
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":5
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":7
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":3
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":10
+	}]
+},{
+	"Clave":"10h+",
+	"Nombre":"10 a 23 horas",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":3
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":2
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":2
+	}]
+},{
+	"Clave":"24h+",
+	"Nombre":"24 a 47 horas",
+	"Total":10,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":5
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":1
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+},{
+	"Clave":"48h+",
+	"Nombre":"48 a 71 horas",
+	"Total":15,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":1
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":2
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":3
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":4
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":5
+	}]
+},{
+	"Clave":"72h+",
+	"Nombre":"72 horas o mas",
+	"Total":12,
+	"Datos":[{
+		"Clave":"MB",
+		"Nombre":"Muy Baja",
+		"Total":2
+	},{
+		"Clave":"B",
+		"Nombre":"Baja",
+		"Total":4
+	},{
+		"Clave":"M",
+		"Nombre":"Media",
+		"Total":2
+	},{
+		"Clave":"A",
+		"Nombre":"Alta",
+		"Total":1
+	},{
+		"Clave":"MA",
+		"Nombre":"Muy Alta",
+		"Total":1
+	}]
+}]

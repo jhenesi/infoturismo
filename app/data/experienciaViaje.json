@@ -1,0 +1,21 @@
+[{
+	"Clave":"Obregon",
+	"Nombre":"Experiencia de viaje a Cd. Obregon",
+	"Promedio":10
+},{
+	"Clave":"Hospitalidad",
+	"Nombre":"Hospitalidad de los residentes que no trabajan en la industria",
+	"Promedio":9
+},{
+	"Clave":"Naturales",
+	"Nombre":"Visitar los sitios naturales/culturales",
+	"Promedio":8
+},{
+	"Clave":"Diferente",
+	"Nombre":"Ofrece una experiencia diferente",
+	"Promedio":5
+},{
+	"Clave":"Disponibilidad",
+	"Nombre":"Disponibilidad de informacion turistica",
+	"Promedio":3
+}]

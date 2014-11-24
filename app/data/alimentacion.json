@@ -1,0 +1,13 @@
+[{
+	"Clave":"Experiencia",
+	"Nombre":"Experiencia del consumo de alimentos y bebidas",
+	"Promedio":8
+},{
+	"Clave":"Calidad",
+	"Nombre":"Calidad de los alimentos y bebidas",
+	"Promedio":8
+},{
+	"Clave":"Limpieza",
+	"Nombre":"Limpieza/Higiene",
+	"Promedio":9
+}]
